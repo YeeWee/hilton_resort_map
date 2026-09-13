@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-01-01T00:00:00.000Z",
+  "hotels": [
+    {
+      "code": "shhaaaa",
+      "name": "Hotel A Shanghai",
+      "brand": "Conrad Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": 31.2304,
+      "lng": 121.4737,
+      "url": "https://www.hilton.com/en/hotels/shhaaaa-hotel-a/",
+      "coordinateSource": "nominatim"
+    },
+    {
+      "code": "shhaaab",
+      "name": "Hotel B Shanghai",
+      "brand": "Conrad Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": 31.238,
+      "lng": 121.49,
+      "url": "https://www.hilton.com/en/hotels/shhaaab-hotel-b/",
+      "coordinateSource": "json-ld"
+    },
+    {
+      "code": "berhhhh",
+      "name": "Hotel C Berlin",
+      "brand": "DoubleTree by Hilton",
+      "region": "Europe",
+      "lat": 52.5163,
+      "lng": 13.3777,
+      "url": "https://www.hilton.com/en/hotels/berhhhh-hotel-c/",
+      "coordinateSource": "nominatim"
+    },
+    {
+      "code": "nychhhh",
+      "name": "Hotel D New York",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": 40.7549,
+      "lng": -73.984,
+      "url": "https://www.hilton.com/en/hotels/nychhhh-hotel-d/",
+      "coordinateSource": "nominatim"
+    },
+    {
+      "code": "nocoord",
+      "name": "Hotel E No Coords",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/nocoord-hotel-e/",
+      "coordinateSource": null
+    }
+  ]
+}

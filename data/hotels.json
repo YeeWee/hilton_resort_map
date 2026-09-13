@@ -1,0 +1,3265 @@
+{
+  "generatedAt": "2026-09-13T10:37:09.490Z",
+  "hotels": [
+    {
+      "code": "auhetci",
+      "name": "Conrad Abu Dhabi Etihad Towers",
+      "brand": "Conrad Hotels & Resorts",
+      "region": "Middle East",
+      "lat": 24.4583909,
+      "lng": 54.322254,
+      "url": "https://www.hilton.com/en/hotels/auhetci-conrad-abu-dhabi-etihad-towers/",
+      "coordinateSource": "nominatim"
+    },
+    {
+      "code": "faoapci",
+      "name": "Conrad Algarve",
+      "brand": "Conrad Hotels & Resorts",
+      "region": "Europe",
+      "lat": 37.0631547,
+      "lng": -8.0289683,
+      "url": "https://www.hilton.com/en/hotels/faoapci-conrad-algarve/",
+      "coordinateSource": "nominatim"
+    },
+    {
+      "code": "bpncici",
+      "name": "Conrad Bali",
+      "brand": "Conrad Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": -8.7806054,
+      "lng": 115.225233,
+      "url": "https://www.hilton.com/en/hotels/bpncici-conrad-bali/",
+      "coordinateSource": "nominatim"
+    },
+    {
+      "code": "pptbnci",
+      "name": "Conrad Bora Bora Nui",
+      "brand": "Conrad Hotels & Resorts",
+      "region": "Americas",
+      "lat": -16.5288887,
+      "lng": -151.767373,
+      "url": "https://www.hilton.com/en/hotels/pptbnci-conrad-bora-bora-nui/",
+      "coordinateSource": "nominatim"
+    },
+    {
+      "code": "olbclci",
+      "name": "Conrad Chia Laguna Sardinia",
+      "brand": "Conrad Hotels & Resorts",
+      "region": "Europe",
+      "lat": 38.8973558,
+      "lng": 8.8696216,
+      "url": "https://www.hilton.com/en/hotels/olbclci-conrad-chia-laguna-sardinia/",
+      "coordinateSource": "nominatim"
+    },
+    {
+      "code": "fllcici",
+      "name": "Conrad Fort Lauderdale Beach",
+      "brand": "Conrad Hotels & Resorts",
+      "region": "Americas",
+      "lat": 26.1308181,
+      "lng": -80.1040988,
+      "url": "https://www.hilton.com/en/hotels/fllcici-conrad-fort-lauderdale-beach/",
+      "coordinateSource": "nominatim"
+    },
+    {
+      "code": "hghyfci",
+      "name": "Conrad Hangzhou Tonglu",
+      "brand": "Conrad Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hghyfci-conrad-hangzhou-tonglu/",
+      "coordinateSource": null
+    },
+    {
+      "code": "jzhcici",
+      "name": "Conrad Jiuzhaigou",
+      "brand": "Conrad Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": 33.3066648,
+      "lng": 103.8145673,
+      "url": "https://www.hilton.com/en/hotels/jzhcici-conrad-jiuzhaigou/",
+      "coordinateSource": "nominatim"
+    },
+    {
+      "code": "usmksci",
+      "name": "Conrad Koh Samui",
+      "brand": "Conrad Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": 9.4191996,
+      "lng": 99.9296341,
+      "url": "https://www.hilton.com/en/hotels/usmksci-conrad-koh-samui/",
+      "coordinateSource": "nominatim"
+    },
+    {
+      "code": "rslvhvh",
+      "name": "Conrad Las Vegas at Resorts World",
+      "brand": "Conrad Hotels & Resorts",
+      "region": "Americas",
+      "lat": 36.1344816,
+      "lng": -115.1656573,
+      "url": "https://www.hilton.com/en/hotels/rslvhvh-resorts-world-las-vegas/rooms/conrad-las-vegas/",
+      "coordinateSource": "nominatim"
+    },
+    {
+      "code": "mlehici",
+      "name": "Conrad Maldives Rangali Island",
+      "brand": "Conrad Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mlehici-conrad-maldives-rangali-island/",
+      "coordinateSource": null
+    },
+    {
+      "code": "orlcici",
+      "name": "Conrad Orlando",
+      "brand": "Conrad Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/orlcici-conrad-orlando/",
+      "coordinateSource": null
+    },
+    {
+      "code": "pvrpmci",
+      "name": "Conrad Punta de Mita",
+      "brand": "Conrad Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/pvrpmci-conrad-punta-de-mita/",
+      "coordinateSource": null
+    },
+    {
+      "code": "rbacici",
+      "name": "Conrad Rabat Arzana",
+      "brand": "Conrad Hotels & Resorts",
+      "region": "Africa",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/rbacici-conrad-rabat-arzana/",
+      "coordinateSource": null
+    },
+    {
+      "code": "cuncici",
+      "name": "Conrad Tulum Riviera Maya",
+      "brand": "Conrad Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/cuncici-conrad-tulum-riviera-maya/",
+      "coordinateSource": null
+    },
+    {
+      "code": "heribqq",
+      "name": "Aulus Chania Resort, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/heribqq-aulus-chania-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "olbbrqq",
+      "name": "Baia di Chia Resort Sardinia, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/olbbrqq-baia-di-chia-resort-sardinia",
+      "coordinateSource": null
+    },
+    {
+      "code": "kylcuqq",
+      "name": "Baker's Cay Resort Key Largo, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/kylcuqq-bakers-cay-resort-key-largo",
+      "coordinateSource": null
+    },
+    {
+      "code": "opobgqq",
+      "name": "Boeira Garden Hotel Porto Gaia, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/opobgqq-boeira-garden-hotel-porto-gaia",
+      "coordinateSource": null
+    },
+    {
+      "code": "pjmcrqq",
+      "name": "Botanika Osa Peninsula, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/pjmcrqq-botanika-osa-peninsula",
+      "coordinateSource": null
+    },
+    {
+      "code": "phxrsqq",
+      "name": "Boulders Resort & Spa Scottsdale, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/phxrsqq-boulders-resort-and-spa-scottsdale",
+      "coordinateSource": null
+    },
+    {
+      "code": "napvpqq",
+      "name": "Casa Mani Resort Napa Valley, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/napvpqq-casa-mani-resort-napa-valley",
+      "coordinateSource": null
+    },
+    {
+      "code": "eywcmqq",
+      "name": "Casa Marina Key West, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/eywcmqq-casa-marina-key-west",
+      "coordinateSource": null
+    },
+    {
+      "code": "atlokqq",
+      "name": "Cloudland at McLemore Resort Lookout Mountain, Curio",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/atlokqq-cloudland-at-mclemore-resort-lookout-mountain",
+      "coordinateSource": null
+    },
+    {
+      "code": "herbsqq",
+      "name": "Domes Aulus Elounda Resort, Curio by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/herbsqq-domes-aulus-elounda-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "mthfbqq",
+      "name": "Faro Blanco Resort & Yacht Club Marathon, Curio by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mthfbqq-faro-blanco-resort-and-yacht-club-marathon",
+      "coordinateSource": null
+    },
+    {
+      "code": "miagsqq",
+      "name": "Gale South Beach, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/miagsqq-gale-south-beach",
+      "coordinateSource": null
+    },
+    {
+      "code": "tlnspqq",
+      "name": "Grand Hotel des Sablettes Plage, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/tlnspqq-grand-hotel-des-sablettes-plage",
+      "coordinateSource": null
+    },
+    {
+      "code": "sluhcqq",
+      "name": "Harbor Club St. Lucia, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sluhcqq-harbor-club-st-lucia",
+      "coordinateSource": null
+    },
+    {
+      "code": "agprhqq",
+      "name": "Higueron Hotel Malaga, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/agprhqq-higueron-hotel-malaga/",
+      "coordinateSource": null
+    },
+    {
+      "code": "qkbbrqq",
+      "name": "Hotel Alpenrock Breckenridge, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/qkbbrqq-alpenrock-breckenridge",
+      "coordinateSource": null
+    },
+    {
+      "code": "sanqqqq",
+      "name": "Hotel del Coronado, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sanqqqq-hotel-del-coronado",
+      "coordinateSource": null
+    },
+    {
+      "code": "fllucqq",
+      "name": "Hotel Maren Fort Lauderdale Beach, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/fllucqq-hotel-maren-fort-lauderdale-beach",
+      "coordinateSource": null
+    },
+    {
+      "code": "ctasiqq",
+      "name": "Il Picciolo Etna Golf Resort & Spa, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/ctasiqq-il-piccolo-etna-golf-resort-and-spa",
+      "coordinateSource": null
+    },
+    {
+      "code": "teaibqq",
+      "name": "Indura Beach & Golf Resort Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/teaibqq-indura-beach-and-golf-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "athibqq",
+      "name": "Isla Brown Corinthia Resort & Spa, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": null,
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/athibqq-isla-brown-corinthia-resort-and-spa",
+      "coordinateSource": null
+    },
+    {
+      "code": "zagopqq",
+      "name": "Keight Hotel Opatija, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/zagopqq-keight-hotel-opatija",
+      "coordinateSource": null
+    },
+    {
+      "code": "skbkrqq",
+      "name": "Koi Resort Saint Kitts, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/skbkrqq-koi-resort-saint-kitts",
+      "coordinateSource": null
+    },
+    {
+      "code": "pqcpqqq",
+      "name": "La Festa Phu Quoc, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/pqcpqqq-la-festa-phu-quoc",
+      "coordinateSource": null
+    },
+    {
+      "code": "psplqqq",
+      "name": "La Quinta Resort & Club, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/psplqqq-la-quinta-resort-and-club",
+      "coordinateSource": null
+    },
+    {
+      "code": "tlnleqq",
+      "name": "Le Hameau des Pesquiers Ecolodge, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/tlnleqq-le-hameau-des-pesquiers-ecolodge",
+      "coordinateSource": null
+    },
+    {
+      "code": "rholiqq",
+      "name": "Aulus Lindos Rhodes Resort, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/rholiqq-lindian-village-beach-resort-rhodes",
+      "coordinateSource": null
+    },
+    {
+      "code": "tzambqq",
+      "name": "Mahogany Bay Resort & Beach Club, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": null,
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/tzambqq-mahogany-bay-resort-and-beach-club",
+      "coordinateSource": null
+    },
+    {
+      "code": "olbccqq",
+      "name": "Mangias Santa Teresa Sardinia, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/olbccqq-mangias-santa-teresa-sardinia",
+      "coordinateSource": null
+    },
+    {
+      "code": "curryqq",
+      "name": "Mangrove Beach Corendon Curacao All-Inclusive Resort, Curio",
+      "brand": "Curio Collection by Hilton",
+      "region": null,
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/curryqq-mangrove-beach-corendon-curacao-all-inclusive-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "herniqq",
+      "name": "Numo Ierapetra Beach Resort Crete, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": null,
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/herniqq-numo-ierapetra-beach-resort-crete",
+      "coordinateSource": null
+    },
+    {
+      "code": "mlegsqq",
+      "name": "SAii Lagoon Maldives, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mlegsqq-saii-lagoon-maldives",
+      "coordinateSource": null
+    },
+    {
+      "code": "jtrsbqq",
+      "name": "Sea Breeze Santorini Beach Resort, Curio Collection",
+      "brand": "Curio Collection by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/jtrsbqq-sea-breeze-santorini-beach-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "jmkmbqq",
+      "name": "Semeli Coast Mykonos, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/jmkmbqq-semeli-coast-mykonos",
+      "coordinateSource": null
+    },
+    {
+      "code": "hghtmqq",
+      "name": "Shu Hua Hotel Tianmu Mountain, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": null,
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hghtmqq-shu-hua-hotel-tianmu-mountain",
+      "coordinateSource": null
+    },
+    {
+      "code": "syrslqq",
+      "name": "Skaneateles Fields Resort & Spa, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/syrslqq-skaneateles-fields-resort-and-spa",
+      "coordinateSource": null
+    },
+    {
+      "code": "olbprqq",
+      "name": "Sulia House Porto Rotondo, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/olbprqq-sulia-house-porto-rotondo",
+      "coordinateSource": null
+    },
+    {
+      "code": "pgdchqq",
+      "name": "Sunseeker Resort Florida Gulf Coast, Curio by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/pgdchqq-sunseeker-resort-florida-gulf-coast/",
+      "coordinateSource": null
+    },
+    {
+      "code": "pgdssqq",
+      "name": "Sunsuites Villas at Sunseeker Resort, Curio by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/pgdssqq-sunsuites-villas-at-sunseeker-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "ibzseqq",
+      "name": "The Club Cala San Miguel Hotel Ibiza, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/ibzseqq-cala-san-miguel-ibiza-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "tparkqq",
+      "name": "The Hiatus Clearwater Beach, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/tparkqq-the-hiatus-clearwater-beach",
+      "coordinateSource": null
+    },
+    {
+      "code": "eywqqqq",
+      "name": "The Reach Key West, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/eywqqqq-the-reach-key-west",
+      "coordinateSource": null
+    },
+    {
+      "code": "curmgqq",
+      "name": "The Rif at Mangrove Beach All-Inclusive, Curio by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/curmgqq-the-rif-at-mangrove-beach-corendon-curacao-all-inclusive",
+      "coordinateSource": null
+    },
+    {
+      "code": "herrsqq",
+      "name": "The Royal Senses Resort Crete, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/herrsqq-the-royal-senses-resort-and-spa-crete",
+      "coordinateSource": null
+    },
+    {
+      "code": "phxssqq",
+      "name": "The Scottsdale Resort and Spa, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/phxssqq-the-scottsdale-resort-and-spa",
+      "coordinateSource": null
+    },
+    {
+      "code": "pbisiqq",
+      "name": "The Singer Oceanfront Resort, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/pbisiqq-the-singer-oceanfront-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "auhwbqq",
+      "name": "The WB Abu Dhabi, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/auhwbqq-the-wb-abu-dhabi-hotel",
+      "coordinateSource": null
+    },
+    {
+      "code": "iahwrqq",
+      "name": "The Woodlands® Resort, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/iahwrqq-the-woodlands-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "lasvgqq",
+      "name": "Virgin Hotels Las Vegas, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/lasvgqq-virgin-hotels-las-vegas",
+      "coordinateSource": null
+    },
+    {
+      "code": "bctbuqq",
+      "name": "Waterstone Resort & Marina Boca Raton, Curio",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/bctbuqq-waterstone-resort-and-marina-boca-raton",
+      "coordinateSource": null
+    },
+    {
+      "code": "sbazdqq",
+      "name": "Zachari Dunes on Mandalay Beach, Curio Collection by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sbazdqq-zachari-dunes-on-mandalay-beach",
+      "coordinateSource": null
+    },
+    {
+      "code": "pujmiqq",
+      "name": "Zemi Miches Punta Cana All-Inclusive Resort, Curio by Hilton",
+      "brand": "Curio Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/pujmiqq-zemi-miches-all-inclusive-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "fllbmdt",
+      "name": "Bahia Mar Fort Lauderdale Beach - a DoubleTree by Hilton",
+      "brand": "DoubleTree by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/fllbmdt-bahia-mar-fort-lauderdale-beach/",
+      "coordinateSource": null
+    },
+    {
+      "code": "nornhdt",
+      "name": "DoubleTree Beach Resort by Hilton Tampa Bay - North Redington Beach",
+      "brand": "DoubleTree by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/nornhdt-doubletree-beach-resort-tampa-bay-north-redington-beach/",
+      "coordinateSource": null
+    },
+    {
+      "code": "hnlkadt",
+      "name": "DoubleTree by Hilton Alana - Waikiki Beach",
+      "brand": "DoubleTree by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hnlkadt-doubletree-alana-waikiki-beach/",
+      "coordinateSource": null
+    },
+    {
+      "code": "aytakdi",
+      "name": "DoubleTree by Hilton Antalya-Kemer All-Inclusive Resort",
+      "brand": "DoubleTree by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/aytakdi-doubletree-antalya-kemer-all-inclusive-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "bjvtrdi",
+      "name": "DoubleTree by Hilton Bodrum Isil Club All-Inclusive Resort",
+      "brand": "DoubleTree by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/bjvtrdi-doubletree-bodrum-isil-club-all-inclusive-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "iphdldi",
+      "name": "DoubleTree by Hilton Damai Laut Resort",
+      "brand": "DoubleTree by Hilton",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/iphdldi-doubletree-damai-laut-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "dxbthdi",
+      "name": "DoubleTree by Hilton Dubai - Jumeirah Beach",
+      "brand": "DoubleTree by Hilton",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dxbthdi-doubletree-dubai-jumeirah-beach/",
+      "coordinateSource": null
+    },
+    {
+      "code": "goiabdi",
+      "name": "DoubleTree by Hilton Goa - Arpora - Baga",
+      "brand": "DoubleTree by Hilton",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/goiabdi-doubletree-goa-arpora-baga/",
+      "coordinateSource": null
+    },
+    {
+      "code": "goigddi",
+      "name": "DoubleTree by Hilton Goa Panaji",
+      "brand": "DoubleTree by Hilton",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/goigddi-doubletree-goa-panaji/",
+      "coordinateSource": null
+    },
+    {
+      "code": "pspdpdt",
+      "name": "DoubleTree by Hilton Golf Resort Palm Springs",
+      "brand": "DoubleTree by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/pspdpdt-doubletree-golf-resort-palm-springs/",
+      "coordinateSource": null
+    },
+    {
+      "code": "hevirdi",
+      "name": "DoubleTree by Hilton Islantilla Beach Golf Resort",
+      "brand": "DoubleTree by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hevirdi-doubletree-islantilla-beach-golf-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "mjvltdi",
+      "name": "DoubleTree by Hilton La Torre Golf & Spa Resort",
+      "brand": "DoubleTree by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mjvltdi-doubletree-la-torre-golf-and-spa-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "pdlladi",
+      "name": "DoubleTree by Hilton Lagoa Azores",
+      "brand": "DoubleTree by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/pdlladi-doubletree-lagoa-azores/",
+      "coordinateSource": null
+    },
+    {
+      "code": "mlaspdi",
+      "name": "DoubleTree by Hilton Malta",
+      "brand": "DoubleTree by Hilton",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mlaspdi-doubletree-malta/",
+      "coordinateSource": null
+    },
+    {
+      "code": "myrdtdt",
+      "name": "DoubleTree by Hilton Myrtle Beach",
+      "brand": "DoubleTree by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/myrdtdt-doubletree-resort-myrtle-beach-oceanfront/",
+      "coordinateSource": null
+    },
+    {
+      "code": "noudidi",
+      "name": "DoubleTree by Hilton Noumea Ilot Maitre Resort",
+      "brand": "DoubleTree by Hilton",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/noudidi-doubletree-noumea-ilot-maitre-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "miaopdt",
+      "name": "DoubleTree by Hilton Ocean Point Resort & Spa – North Miami",
+      "brand": "DoubleTree by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/miaopdt-doubletree-resort-and-spa-ocean-point-north-miami-beach/",
+      "coordinateSource": null
+    },
+    {
+      "code": "okadidi",
+      "name": "DoubleTree by Hilton Okinawa Chatan Resort",
+      "brand": "DoubleTree by Hilton",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/okadidi-doubletree-okinawa-chatan-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "mcosrdt",
+      "name": "DoubleTree by Hilton Orlando at SeaWorld",
+      "brand": "DoubleTree by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mcosrdt-doubletree-orlando-at-seaworld/",
+      "coordinateSource": null
+    },
+    {
+      "code": "slcywdt",
+      "name": "DoubleTree by Hilton Park City - The Yarrow",
+      "brand": "DoubleTree by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/slcywdt-doubletree-park-city-the-yarrow/",
+      "coordinateSource": null
+    },
+    {
+      "code": "hktpadi",
+      "name": "DoubleTree by Hilton Phuket Banthai Resort",
+      "brand": "DoubleTree by Hilton",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hktpadi-doubletree-phuket-banthai-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "yqbqcdt",
+      "name": "DoubleTree by Hilton Quebec Resort",
+      "brand": "DoubleTree by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/yqbqcdt-doubletree-quebec-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "rktmidi",
+      "name": "DoubleTree by Hilton Resort & Spa Marjan Island",
+      "brand": "DoubleTree by Hilton",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/rktmidi-doubletree-resort-and-spa-marjan-island/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sjudtdt",
+      "name": "DoubleTree by Hilton San Juan",
+      "brand": "DoubleTree by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sjudtdt-doubletree-san-juan/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sezdtdi",
+      "name": "DoubleTree by Hilton Seychelles - Allamanda Resort & Spa",
+      "brand": "DoubleTree by Hilton",
+      "region": "Africa",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sezdtdi-doubletree-seychelles-allamanda-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sshsbdi",
+      "name": "DoubleTree by Hilton Sharm El Sheikh - Sharks Bay Resort",
+      "brand": "DoubleTree by Hilton",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sshsbdi-doubletree-sharm-el-sheikh-sharks-bay-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "swadidi",
+      "name": "DoubleTree by Hilton Shanwei",
+      "brand": "DoubleTree by Hilton",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/swadidi-doubletree-shanwei/",
+      "coordinateSource": null
+    },
+    {
+      "code": "wrzrjdi",
+      "name": "DoubleTree by Hilton Weerawila Rajawarna Resort",
+      "brand": "DoubleTree by Hilton",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/wrzrjdi-doubletree-weerawila-rajawarna-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "iagdtdt",
+      "name": "DoubleTree Fallsview Resort & Spa by Hilton - Niagara Falls",
+      "brand": "DoubleTree by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/iagdtdt-doubletree-fallsview-resort-and-spa-niagara-falls/",
+      "coordinateSource": null
+    },
+    {
+      "code": "nansidi",
+      "name": "DoubleTree Resort by Hilton Fiji - Sonaisali Island",
+      "brand": "DoubleTree by Hilton",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/nansidi-doubletree-resort-fiji-sonaisali-island/",
+      "coordinateSource": null
+    },
+    {
+      "code": "eywdtdt",
+      "name": "DoubleTree Resort by Hilton Grand Key - Key West",
+      "brand": "DoubleTree by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/eywdtdt-doubletree-resort-grand-key-key-west/",
+      "coordinateSource": null
+    },
+    {
+      "code": "lnswvdt",
+      "name": "DoubleTree Resort by Hilton Lancaster",
+      "brand": "DoubleTree by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/lnswvdt-doubletree-resort-lancaster/",
+      "coordinateSource": null
+    },
+    {
+      "code": "phxsjdt",
+      "name": "DoubleTree Resort by Hilton Paradise Valley - Scottsdale",
+      "brand": "DoubleTree by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/phxsjdt-doubletree-resort-paradise-valley-scottsdale/",
+      "coordinateSource": null
+    },
+    {
+      "code": "penmbdi",
+      "name": "DoubleTree Resort by Hilton Penang",
+      "brand": "DoubleTree by Hilton",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/penmbdi-doubletree-resort-penang/",
+      "coordinateSource": null
+    },
+    {
+      "code": "hwofldt",
+      "name": "DoubleTree Resort Hollywood Beach",
+      "brand": "DoubleTree by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hwofldt-doubletree-resort-hollywood-beach/",
+      "coordinateSource": null
+    },
+    {
+      "code": "mcofhdt",
+      "name": "DoubleTree Suites by Hilton Orlando - Disney Springs™ Area",
+      "brand": "DoubleTree by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mcofhdt-doubletree-suites-orlando/",
+      "coordinateSource": null
+    },
+    {
+      "code": "mztdtdt",
+      "name": "Doubletree by Hilton Mazatlan",
+      "brand": "DoubleTree by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mztdtdt-doubletree-mazatlan/",
+      "coordinateSource": null
+    },
+    {
+      "code": "itohndt",
+      "name": "Grand Naniloa Hotel Hilo - a DoubleTree by Hilton",
+      "brand": "DoubleTree by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/itohndt-grand-naniloa-hotel-hilo/",
+      "coordinateSource": null
+    },
+    {
+      "code": "egevcdt",
+      "name": "Highline Vail - a DoubleTree by Hilton",
+      "brand": "DoubleTree by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/egevcdt-highline-vail/",
+      "coordinateSource": null
+    },
+    {
+      "code": "auajmes",
+      "name": "Embassy Suites by Hilton Aruba Resort",
+      "brand": "Embassy Suites by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/auajmes-embassy-suites-aruba-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "cltcces",
+      "name": "Embassy Suites by Hilton Charlotte-Concord-Golf Resort & Spa",
+      "brand": "Embassy Suites by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/cltcces-embassy-suites-charlotte-concord-golf-resort-and-spa",
+      "coordinateSource": null
+    },
+    {
+      "code": "deefles",
+      "name": "Embassy Suites by Hilton Deerfield Beach Resort & Spa",
+      "brand": "Embassy Suites by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/deefles-embassy-suites-deerfield-beach-resort-and-spa",
+      "coordinateSource": null
+    },
+    {
+      "code": "dorpres",
+      "name": "Embassy Suites by Hilton Dorado del Mar Beach Resort",
+      "brand": "Embassy Suites by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dorpres-embassy-suites-dorado-del-mar-beach-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "gspeses",
+      "name": "Embassy Suites by Hilton Greenville Golf Resort & Conf Ctr",
+      "brand": "Embassy Suites by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/gspeses-embassy-suites-greenville-golf-resort-and-conference-center",
+      "coordinateSource": null
+    },
+    {
+      "code": "gufbees",
+      "name": "Embassy Suites by Hilton Gulf Shores Beach Resort",
+      "brand": "Embassy Suites by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/gufbees-embassy-suites-gulf-shores-beach-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "myreses",
+      "name": "Embassy Suites by Hilton Myrtle Beach Oceanfront Resort",
+      "brand": "Embassy Suites by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/myreses-embassy-suites-myrtle-beach-oceanfront-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "mcowdes",
+      "name": "Embassy Suites by Hilton Orlando Lake Buena Vista Resort",
+      "brand": "Embassy Suites by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mcowdes-embassy-suites-orlando-lake-buena-vista-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "mcostes",
+      "name": "Embassy Suites by Hilton Orlando Sunset Walk",
+      "brand": "Embassy Suites by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mcostes-embassy-suites-orlando-sunset-walk",
+      "coordinateSource": null
+    },
+    {
+      "code": "ecpppes",
+      "name": "Embassy Suites by Hilton Panama City Beach Resort",
+      "brand": "Embassy Suites by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/ecpppes-embassy-suites-panama-city-beach-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "scteses",
+      "name": "Embassy Suites by Hilton Scottsdale Resort",
+      "brand": "Embassy Suites by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/scteses-embassy-suites-scottsdale-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "orfanes",
+      "name": "Embassy Suites by Hilton Virginia Beach Oceanfront Resort",
+      "brand": "Embassy Suites by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/orfanes-embassy-suites-virginia-beach-oceanfront-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "hnleses",
+      "name": "Embassy Suites by Hilton Waikiki Beach Walk",
+      "brand": "Embassy Suites by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hnleses-embassy-suites-waikiki-beach-walk",
+      "coordinateSource": null
+    },
+    {
+      "code": "ustboes",
+      "name": "Embassy Suites St Augustine Beach Oceanfront Resort",
+      "brand": "Embassy Suites by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/ustboes-embassy-suites-st-augustine-beach-oceanfront-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "gcmgchx",
+      "name": "Hampton by Hilton Grand Cayman Seven Mile Beach",
+      "brand": "Hampton by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/gcmgchx-hampton-grand-cayman-seven-mile-beach/",
+      "coordinateSource": null
+    },
+    {
+      "code": "rktmahx",
+      "name": "Hampton by Hilton Marjan Island",
+      "brand": "Hampton by Hilton",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/rktmahx-hampton-marjan-island/",
+      "coordinateSource": null
+    },
+    {
+      "code": "okasogv",
+      "name": "Hilton Club The Beach Resort Sesoko",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/okasogv-hilton-club-the-beach-resort-sesoko",
+      "coordinateSource": null
+    },
+    {
+      "code": "lasehgv",
+      "name": "Hilton Club Elara Las Vegas",
+      "brand": "Hilton Grand Vacation Club",
+      "region": null,
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/lasehgv-hilton-club-elara-las-vegas",
+      "coordinateSource": null
+    },
+    {
+      "code": "myraogv",
+      "name": "Hilton Grand Vacations Club Anderson Ocean Myrtle Beach",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/myraogv-hilton-grand-vacations-club-anderson-ocean-myrtle-beach/",
+      "coordinateSource": null
+    },
+    {
+      "code": "hnlhwgv",
+      "name": "Hilton Grand Vacations Club at Hilton Hawaiian Village",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hnlhwgv-hilton-grand-vacations-club-at-hilton-hawaiian-village/",
+      "coordinateSource": null
+    },
+    {
+      "code": "yyzblgv",
+      "name": "Hilton Grand Vacations Club Blue Mountain Canada",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/yyzblgv-hilton-grand-vacations-club-blue-mountain-canada",
+      "coordinateSource": null
+    },
+    {
+      "code": "satergv",
+      "name": "Hilton Vacation Club Eilan Resort & Spa San Antonio",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/satergv-hilton-vacation-club-eilan-resort-and-spa-san-antonio/",
+      "coordinateSource": null
+    },
+    {
+      "code": "lascsgv",
+      "name": "Hilton Grand Vacations Club Elara Center Strip Las Vegas",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/lascsgv-hilton-grand-vacations-club-elara-center-strip-las-vegas/",
+      "coordinateSource": null
+    },
+    {
+      "code": "lasflgv",
+      "name": "Hilton Grand Vacations Club Flamingo Las Vegas",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/lasflgv-hilton-grand-vacations-club-flamingo-las-vegas/",
+      "coordinateSource": null
+    },
+    {
+      "code": "hnlgwgv",
+      "name": "Hilton Grand Vacations Club Grand Waikikian Honolulu",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hnlgwgv-hilton-grand-vacations-club-grand-waikikian-honolulu/",
+      "coordinateSource": null
+    },
+    {
+      "code": "hnlwbgv",
+      "name": "Hilton Grand Vacations Club Hokulani Waikiki Honolulu",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hnlwbgv-hilton-grand-vacations-club-hokulani-waikiki-honolulu/",
+      "coordinateSource": null
+    },
+    {
+      "code": "vpssagv",
+      "name": "Hilton Grand Vacations Club in Sandestin Golf & Beach Resort",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/vpssagv-hilton-grand-vacations-club-in-sandestin-golf-and-beach-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "koaklgv",
+      "name": "Hilton Grand Vacations Club Kings’ Land Waikoloa",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/koaklgv-hilton-grand-vacations-club-kings-land-waikoloa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "koawbgv",
+      "name": "Hilton Grand Vacations Club Kohala Suites Waikoloa",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/koawbgv-hilton-grand-vacations-club-kohala-suites-waikoloa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sjdgvgv",
+      "name": "Hilton Grand Vacations Club La Pacifica Los Cabos",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sjdgvgv-hilton-grand-vacations-club-la-pacifica-los-cabos/",
+      "coordinateSource": null
+    },
+    {
+      "code": "mcoubgv",
+      "name": "Hilton Grand Vacations Club Las Palmeras Orlando",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mcoubgv-hilton-grand-vacations-club-las-palmeras-orlando/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sanmbgv",
+      "name": "Hilton Grand Vacations Club MarBrisa Carlsbad",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sanmbgv-hilton-grand-vacations-club-marbrisa-carlsbad/",
+      "coordinateSource": null
+    },
+    {
+      "code": "oggmbgv",
+      "name": "Hilton Grand Vacations Club Maui Bay Villas",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/oggmbgv-hilton-grand-vacations-club-maui-bay-villas",
+      "coordinateSource": null
+    },
+    {
+      "code": "myrttgv",
+      "name": "Hilton Grand Vacations Club Ocean 22 Myrtle Beach",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/myrttgv-hilton-grand-vacations-club-ocean-22-myrtle-beach/",
+      "coordinateSource": null
+    },
+    {
+      "code": "myroegv",
+      "name": "Hilton Grand Vacations Club Ocean Enclave Myrtle Beach",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/myroegv-hilton-grand-vacations-club-ocean-enclave-myrtle-beach/",
+      "coordinateSource": null
+    },
+    {
+      "code": "hhhgvgv",
+      "name": "Hilton Grand Vacations Club Ocean Oak Resort Hilton Head",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hhhgvgv-hilton-grand-vacations-club-ocean-oak-resort-hilton-head/",
+      "coordinateSource": null
+    },
+    {
+      "code": "koaotgv",
+      "name": "Hilton Grand Vacations Club Ocean Tower Waikoloa Village",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/koaotgv-hilton-grand-vacations-club-ocean-tower-waikoloa-village/",
+      "coordinateSource": null
+    },
+    {
+      "code": "lasvsgv",
+      "name": "Hilton Grand Vacations Club on the Las Vegas Strip",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/lasvsgv-hilton-grand-vacations-club-on-the-las-vegas-strip/",
+      "coordinateSource": null
+    },
+    {
+      "code": "laslvgv",
+      "name": "Hilton Grand Vacations Club Paradise Las Vegas",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/laslvgv-hilton-grand-vacations-club-paradise-las-vegas/",
+      "coordinateSource": null
+    },
+    {
+      "code": "mcomdgv",
+      "name": "Hilton Grand Vacations Club Parc Soleil Orlando",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mcomdgv-hilton-grand-vacations-club-parc-soleil-orlando/",
+      "coordinateSource": null
+    },
+    {
+      "code": "orlswgv",
+      "name": "Hilton Grand Vacations Club SeaWorld® Orlando",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/orlswgv-hilton-grand-vacations-club-seaworld-orlando/",
+      "coordinateSource": null
+    },
+    {
+      "code": "slcsegv",
+      "name": "Hilton Grand Vacations Club Sunrise Lodge Park City",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/slcsegv-hilton-grand-vacations-club-sunrise-lodge-park-city/",
+      "coordinateSource": null
+    },
+    {
+      "code": "bgicrgv",
+      "name": "Hilton Grand Vacations Club The Crane Barbados",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/bgicrgv-hilton-grand-vacations-club-the-crane-barbados/",
+      "coordinateSource": null
+    },
+    {
+      "code": "hnldrgv",
+      "name": "Hilton Grand Vacations Club The Grand Islander Waikiki Honolulu",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hnldrgv-hilton-grand-vacations-club-the-grand-islander-waikiki-honolulu",
+      "coordinateSource": null
+    },
+    {
+      "code": "mcogvgv",
+      "name": "Hilton Vacation Club The Fountains Orlando",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mcogvgv-hilton-vacation-club-the-fountains-orlando/",
+      "coordinateSource": null
+    },
+    {
+      "code": "orlingv",
+      "name": "Hilton Grand Vacations Club Tuscany Village Orlando",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/orlingv-hilton-grand-vacations-club-tuscany-village-orlando",
+      "coordinateSource": null
+    },
+    {
+      "code": "qkbvagv",
+      "name": "Hilton Grand Vacations Club Valdoro Mountain Lodge Breckenridge",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/qkbvagv-hilton-grand-vacations-club-valdoro-mountain-lodge-breckenridge",
+      "coordinateSource": null
+    },
+    {
+      "code": "ywswhgv",
+      "name": "Hilton Grand Vacations Club Whistler",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/ywswhgv-hilton-grand-vacations-club-whistler",
+      "coordinateSource": null
+    },
+    {
+      "code": "mcotkgv",
+      "name": "Hilton Vacation Club Aqua Sol Orlando West",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mcotkgv-hilton-vacation-club-aqua-sol-orlando",
+      "coordinateSource": null
+    },
+    {
+      "code": "sjdcagv",
+      "name": "Hilton Vacation Club Cabo Azul Los Cabos",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sjdcagv-hilton-vacation-club-cabo-azul-los-cabos",
+      "coordinateSource": null
+    },
+    {
+      "code": "lascngv",
+      "name": "Hilton Vacation Club Cancun Resort Las Vegas",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/lascngv-hilton-vacation-club-cancun-resort-las-vegas",
+      "coordinateSource": null
+    },
+    {
+      "code": "mcotrgv",
+      "name": "Hilton Vacation Club Cypress Pointe Orlando",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mcotrgv-hilton-vacation-club-cypress-pointe-orlando",
+      "coordinateSource": null
+    },
+    {
+      "code": "dabdbgv",
+      "name": "Hilton Vacation Club Daytona Beach Regency",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dabdbgv-hilton-vacation-club-daytona-beach-regency",
+      "coordinateSource": null
+    },
+    {
+      "code": "sxmflgv",
+      "name": "Hilton Vacation Club Flamingo Beach St. Maarten",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sxmflgv-hilton-vacation-club-flamingo-beach-st-maarten",
+      "coordinateSource": null
+    },
+    {
+      "code": "mcobegv",
+      "name": "Hilton Vacation Club Grand Beach Orlando",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mcobegv-hilton-vacation-club-grand-beach-orlando",
+      "coordinateSource": null
+    },
+    {
+      "code": "phflugv",
+      "name": "Hilton Vacation Club Greensprings Williamsburg",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/phflugv-hilton-vacation-club-greensprings-williamsburg",
+      "coordinateSource": null
+    },
+    {
+      "code": "jhmkagv",
+      "name": "Hilton Vacation Club Ka'anapali Beach Maui",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/jhmkagv-hilton-vacation-club-kaanapali-beach-maui",
+      "coordinateSource": null
+    },
+    {
+      "code": "tvlvagv",
+      "name": "Hilton Vacation Club Lake Tahoe Resort South",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/tvlvagv-hilton-vacation-club-lake-tahoe-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "sdxplgv",
+      "name": "Hilton Vacation Club Los Abrigados Resort & Spa Sedona",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sdxplgv-hilton-vacation-club-los-abrigados-sedona",
+      "coordinateSource": null
+    },
+    {
+      "code": "ismmygv",
+      "name": "Hilton Vacation Club Mystic Dunes Orlando",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/ismmygv-hilton-vacation-club-mystic-dunes-orlando",
+      "coordinateSource": null
+    },
+    {
+      "code": "orfavgv",
+      "name": "Hilton Vacation Club Ocean Beach Club Virginia Beach",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/orfavgv-hilton-vacation-ocean-beach-club",
+      "coordinateSource": null
+    },
+    {
+      "code": "orfaigv",
+      "name": "Hilton Vacation Club Oceanaire Virginia Beach",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/orfaigv-hilton-vacation-club-oceanaire-virginia-beach",
+      "coordinateSource": null
+    },
+    {
+      "code": "pspspgv",
+      "name": "Hilton Vacation Club Palm Canyon Palm Springs",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/pspspgv-hilton-vacation-club-palm-canyon-palm-springs",
+      "coordinateSource": null
+    },
+    {
+      "code": "mcopygv",
+      "name": "Hilton Vacation Club Polynesian Isles Kissimmee",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mcopygv-hilton-vacation-club-polynesian-isles-kissimmee",
+      "coordinateSource": null
+    },
+    {
+      "code": "phxragv",
+      "name": "Hilton Vacation Club Rancho Manana Phoenix/Cave Creek",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/phxragv-hilton-vacation-club-rancho-manana",
+      "coordinateSource": null
+    },
+    {
+      "code": "flgrigv",
+      "name": "Hilton Vacation Club Ridge on Sedona",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/flgrigv-hilton-vacation-club-ridge-on-sedona",
+      "coordinateSource": null
+    },
+    {
+      "code": "snarbgv",
+      "name": "Hilton Vacation Club Riviera Beach & Shores",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/snarbgv-hilton-vacation-club-riviera-beach-and-shores",
+      "coordinateSource": null
+    },
+    {
+      "code": "sxmrogv",
+      "name": "Hilton Vacation Club Royal Palm St. Maarten",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sxmrogv-hilton-vacation-club-royal-palm-st-maarten",
+      "coordinateSource": null
+    },
+    {
+      "code": "phxregv",
+      "name": "Hilton Vacation Club Scottsdale Links Resort",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/phxregv-hilton-vacation-club-scottsdale-links-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "phxmrgv",
+      "name": "Hilton Vacation Club Scottsdale Villa Mirage",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/phxmrgv-hilton-vacation-club-scottsdale-villa-mirage",
+      "coordinateSource": null
+    },
+    {
+      "code": "flgsegv",
+      "name": "Hilton Vacation Club Sedona Summit",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/flgsegv-hilton-vacation-club-sedona-summit",
+      "coordinateSource": null
+    },
+    {
+      "code": "dabcogv",
+      "name": "Hilton Vacation Club The Cove on Ormond Beach",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dabcogv-hilton-vacation-club-the-cove-on-ormond-beach",
+      "coordinateSource": null
+    },
+    {
+      "code": "phfpogv",
+      "name": "Hilton Vacation Club The Historic Powhatan Williamsburg",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/phfpogv-hilton-vacation-club-the-historic-powhatan-williamsburg",
+      "coordinateSource": null
+    },
+    {
+      "code": "hnlmogv",
+      "name": "Hilton Vacation Club The Modern Honolulu",
+      "brand": "Hilton Grand Vacation Club",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hnlmogv-hilton-vacation-club-the-modern-honolulu",
+      "coordinateSource": null
+    },
+    {
+      "code": "fllfshh",
+      "name": "Beach House Fort Lauderdale, a Hilton Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/fllfshh-beach-house-fort-lauderdale/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sanrshf",
+      "name": "Cape Rey Carlsbad Beach, a Hilton Resort and Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sanrshf-cape-rey-carlsbad-beach/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sjnhihh",
+      "name": "Caribe Hilton",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sjnhihh-caribe-hilton/",
+      "coordinateSource": null
+    },
+    {
+      "code": "tushthh",
+      "name": "El Conquistador Tucson, A Hilton Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/tushthh-el-conquistador-tucson/",
+      "coordinateSource": null
+    },
+    {
+      "code": "auhyihi",
+      "name": "Hilton Abu Dhabi Yas Island",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/auhyihi-hilton-abu-dhabi-yas-island/",
+      "coordinateSource": null
+    },
+    {
+      "code": "alyachi",
+      "name": "Hilton Alexandria Corniche",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/alyachi-hilton-alexandria-corniche/",
+      "coordinateSource": null
+    },
+    {
+      "code": "alykrhi",
+      "name": "Hilton Alexandria King's Ranch",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/alykrhi-hilton-alexandria-kings-ranch/",
+      "coordinateSource": null
+    },
+    {
+      "code": "dfwanhh",
+      "name": "Hilton Anatole",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dfwanhh-hilton-anatole/",
+      "coordinateSource": null
+    },
+    {
+      "code": "auahhhh",
+      "name": "Hilton Aruba Caribbean Resort & Casino",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/auahhhh-hilton-aruba-caribbean-resort-and-casino",
+      "coordinateSource": null
+    },
+    {
+      "code": "dpsbahi",
+      "name": "Hilton Bali Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dpsbahi-hilton-bali-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "bgihihh",
+      "name": "Hilton Barbados Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/bgihihh-hilton-barbados-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "hhhrshh",
+      "name": "Hilton Beachfront Resort and Spa Hilton Head Island",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hhhrshh-hilton-beachfront-resort-and-spa-hilton-head-island",
+      "coordinateSource": null
+    },
+    {
+      "code": "miabmhf",
+      "name": "Hilton Bentley Miami/South Beach",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/miabmhf-hilton-bentley-miami-south-beach",
+      "coordinateSource": null
+    },
+    {
+      "code": "lgkbbhi",
+      "name": "Hilton Burau Bay Langkawi Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/lgkbbhi-hilton-burau-bay-langkawi-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "miambhf",
+      "name": "Hilton Cabana Miami Beach Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/miambhf-hilton-cabana-miami-beach-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sidcvhi",
+      "name": "Hilton Cabo Verde Sal Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Africa",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sidcvhi-hilton-cabo-verde-sal-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "cunmchh",
+      "name": "Hilton Cancun Mar Caribe All-Inclusive Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/cunmchh-hilton-cancun-mar-caribe-all-inclusive-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "cunqrhh",
+      "name": "Hilton Cancun, an All-Inclusive Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/cunqrhh-hilton-cancun/",
+      "coordinateSource": null
+    },
+    {
+      "code": "ctghihh",
+      "name": "Hilton Cartagena Hotel",
+      "brand": "Hilton Hotels & Resorts",
+      "region": null,
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/ctghihh-hilton-cartagena-hotel/",
+      "coordinateSource": null
+    },
+    {
+      "code": "chqiahi",
+      "name": "Hilton Chania Old Town Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/chqiahi-hilton-chania/",
+      "coordinateSource": null
+    },
+    {
+      "code": "chibhhh",
+      "name": "Hilton Chicago/Oak Brook Hills Resort & Conference Center",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/chibhhh-hilton-chicago-oak-brook-hills-resort-and-conference-center/",
+      "coordinateSource": null
+    },
+    {
+      "code": "crkpphi",
+      "name": "Hilton Clark Sun Valley Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/crkpphi-hilton-clark-sun-valley-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "piecbhf",
+      "name": "Hilton Clearwater Beach Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/piecbhf-hilton-clearwater-beach-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "dlmhrhi",
+      "name": "Hilton Dalaman Sarigerme Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dlmhrhi-hilton-dalaman-sarigerme-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "dlugthi",
+      "name": "Hilton Dali Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dlugthi-hilton-dali-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "dalrwhf",
+      "name": "Hilton Dallas/Rockwall Lakefront",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dalrwhf-hilton-dallas-rockwall-lakefront/",
+      "coordinateSource": null
+    },
+    {
+      "code": "dabdhhf",
+      "name": "Hilton Daytona Beach Oceanfront Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dabdhhf-hilton-daytona-beach-oceanfront-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "ammdshi",
+      "name": "Hilton Dead Sea Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/ammdshi-hilton-dead-sea-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "dohhdhi",
+      "name": "Hilton Doha",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dohhdhi-hilton-doha/",
+      "coordinateSource": null
+    },
+    {
+      "code": "dohprhi",
+      "name": "Hilton Doha The Pearl",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dohprhi-hilton-doha-the-pearl/",
+      "coordinateSource": null
+    },
+    {
+      "code": "dxbjbhi",
+      "name": "Hilton Dubai Jumeirah",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dxbjbhi-hilton-dubai-jumeirah/",
+      "coordinateSource": null
+    },
+    {
+      "code": "dxbpjhi",
+      "name": "Hilton Dubai Palm Jumeirah",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dxbpjhi-hilton-dubai-palm-jumeirah/",
+      "coordinateSource": null
+    },
+    {
+      "code": "dxbbrhi",
+      "name": "Hilton Dubai The Walk",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dxbbrhi-hilton-dubai-the-walk/",
+      "coordinateSource": null
+    },
+    {
+      "code": "nanhihi",
+      "name": "Hilton Fiji Beach Resort and Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/nanhihi-hilton-fiji-beach-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "fllgrhh",
+      "name": "Hilton Fort Lauderdale Marina",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/fllgrhh-hilton-fort-lauderdale-marina/",
+      "coordinateSource": null
+    },
+    {
+      "code": "glsgihf",
+      "name": "Hilton Galveston Island Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/glsgihf-hilton-galveston-island-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "goishhi",
+      "name": "Hilton Goa Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/goishhi-hilton-goa-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "gumhitw",
+      "name": "Hilton Guam Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/gumhitw-hilton-guam-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "kyohitw",
+      "name": "Hilton Gyeongju",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/kyohitw-hilton-gyeongju/",
+      "coordinateSource": null
+    },
+    {
+      "code": "hghlrhi",
+      "name": "Hilton Hangzhou Qiandao Lake Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hghlrhi-hilton-hangzhou-qiandao-lake-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "hnlhvhh",
+      "name": "Hilton Hawaiian Village Waikiki Beach Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hnlhvhh-hilton-hawaiian-village-waikiki-beach-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "ppthihh",
+      "name": "Hilton Hotel Tahiti",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/ppthihh-hilton-hotel-tahiti/",
+      "coordinateSource": null
+    },
+    {
+      "code": "hhqhihi",
+      "name": "Hilton Hua Hin Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hhqhihi-hilton-hua-hin-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "huzlhhi",
+      "name": "Hilton Huizhou Longmen Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/huzlhhi-hilton-huizhou-longmen-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "hrghitw",
+      "name": "Hilton Hurghada Plaza",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hrghitw-hilton-hurghada-plaza/",
+      "coordinateSource": null
+    },
+    {
+      "code": "santphh",
+      "name": "Hilton La Jolla Torrey Pines",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/santphh-hilton-la-jolla-torrey-pines/",
+      "coordinateSource": null
+    },
+    {
+      "code": "laslkhf",
+      "name": "Hilton Lake Las Vegas Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/laslkhf-hilton-lake-las-vegas-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sjdlchh",
+      "name": "Hilton Los Cabos Beach & Golf Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sjdlchh-hilton-los-cabos-beach-and-golf-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "luxhitw",
+      "name": "Hilton Luxor Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": null,
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/luxhitw-hilton-luxor-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "mleaihi",
+      "name": "Hilton Maldives Amingiri Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mleaihi-hilton-maldives-amingiri-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "pmicchi",
+      "name": "Hilton Mallorca Galatzo",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/pmicchi-hilton-mallorca-galatzo/",
+      "coordinateSource": null
+    },
+    {
+      "code": "mlahitw",
+      "name": "Hilton Malta",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mlahitw-hilton-malta/",
+      "coordinateSource": null
+    },
+    {
+      "code": "mrkmhhf",
+      "name": "Hilton Marco Island Beach Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mrkmhhf-hilton-marco-island-beach-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "rmfhihi",
+      "name": "Hilton Marsa Alam Nubian Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/rmfhihi-hilton-marsa-alam-nubian-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "mruhihi",
+      "name": "Hilton Mauritius Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Africa",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mruhihi-hilton-mauritius-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "pptmlhh",
+      "name": "Hilton Moorea Lagoon Resort and Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/pptmlhh-hilton-moorea-lagoon-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "myrbhhh",
+      "name": "Hilton Myrtle Beach Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/myrbhhh-hilton-myrtle-beach-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "nkgnshi",
+      "name": "Hilton Nanjing Niushoushan",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/nkgnshi-hilton-nanjing-niushoushan/",
+      "coordinateSource": null
+    },
+    {
+      "code": "ngbqahi",
+      "name": "Hilton Ningbo Dongqian Lake",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/ngbqahi-hilton-ningbo-dongqian-lake/",
+      "coordinateSource": null
+    },
+    {
+      "code": "ctsnvhi",
+      "name": "Hilton Niseko Village",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/ctsnvhi-hilton-niseko-village/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sbyofhf",
+      "name": "Hilton Ocean City Oceanfront Suites",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sbyofhf-hilton-ocean-city-oceanfront-suites/",
+      "coordinateSource": null
+    },
+    {
+      "code": "tyoodhi",
+      "name": "Hilton Odawara Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/tyoodhi-hilton-odawara-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "okaochi",
+      "name": "Hilton Okinawa Chatan Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/okaochi-hilton-okinawa-chatan-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "okamihi",
+      "name": "Hilton Okinawa Miyako Island Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/okamihi-hilton-okinawa-miyako-island-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "okasehi",
+      "name": "Hilton Okinawa Sesoko Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/okasehi-hilton-okinawa-sesoko-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "orlochh",
+      "name": "Hilton Orlando",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/orlochh-hilton-orlando/",
+      "coordinateSource": null
+    },
+    {
+      "code": "mcobuhh",
+      "name": "Hilton Orlando Buena Vista Palace Disney Springs Area",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mcobuhh-hilton-orlando-buena-vista-palace/",
+      "coordinateSource": null
+    },
+    {
+      "code": "orldwhh",
+      "name": "Hilton Orlando Lake Buena Vista - Disney Springs Area",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/orldwhh-hilton-orlando-lake-buena-vista/",
+      "coordinateSource": null
+    },
+    {
+      "code": "psppshf",
+      "name": "Hilton Palm Springs",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/psppshf-hilton-palm-springs/",
+      "coordinateSource": null
+    },
+    {
+      "code": "bkkhphi",
+      "name": "Hilton Pattaya",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/bkkhphi-hilton-pattaya/",
+      "coordinateSource": null
+    },
+    {
+      "code": "pnspehf",
+      "name": "Hilton Pensacola Beach",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/pnspehf-hilton-pensacola-beach/",
+      "coordinateSource": null
+    },
+    {
+      "code": "phxsppr",
+      "name": "Hilton Phoenix Resort at the Peak",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/phxsppr-hilton-phoenix-resort-at-the-peak/",
+      "coordinateSource": null
+    },
+    {
+      "code": "phxtcpr",
+      "name": "Hilton Phoenix Tapatio Cliffs Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/phxtcpr-hilton-phoenix-tapatio-cliffs-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "pnchihh",
+      "name": "Hilton Ponce Golf & Casino Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/pnchihh-hilton-ponce-golf-and-casino-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "caipghi",
+      "name": "Hilton Pyramids Golf",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/caipghi-hilton-pyramids-golf/",
+      "coordinateSource": null
+    },
+    {
+      "code": "vdohohi",
+      "name": "Hilton Quang Hanh Onsen Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/vdohohi-hilton-quang-hanh-onsen-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "zqnhqhi",
+      "name": "Hilton Queenstown Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/zqnhqhi-hilton-queenstown-resort-and-spa",
+      "coordinateSource": null
+    },
+    {
+      "code": "rjkochi",
+      "name": "Hilton Rijeka Costabella Beach Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/rjkochi-hilton-rijeka-costabella-beach-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sllhihi",
+      "name": "Hilton Salalah Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sllhihi-hilton-salalah-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "dohsbhi",
+      "name": "Hilton Salwa Beach Resort & Villas",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dohsbhi-hilton-salwa-beach-resort-villas/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sandmhf",
+      "name": "Hilton San Diego/Del Mar",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sandmhf-hilton-san-diego-del-mar/",
+      "coordinateSource": null
+    },
+    {
+      "code": "deshihf",
+      "name": "Hilton Sandestin Beach Golf Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/deshihf-hilton-sandestin-beach-golf-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sqdhihi",
+      "name": "Hilton Sanqingshan Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sqdhihi-hilton-sanqingshan-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sbafphh",
+      "name": "Hilton Santa Barbara Beachfront Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sbafphh-hilton-santa-barbara-beachfront-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sfecghh",
+      "name": "Hilton Santa Fe Buffalo Thunder",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sfecghh-hilton-santa-fe-buffalo-thunder/",
+      "coordinateSource": null
+    },
+    {
+      "code": "smrcnhh",
+      "name": "Hilton Santa Marta",
+      "brand": "Hilton Hotels & Resorts",
+      "region": null,
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/smrcnhh-hilton-santa-marta/",
+      "coordinateSource": null
+    },
+    {
+      "code": "syxhihi",
+      "name": "Hilton Sanya Yalong Bay Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/syxhihi-hilton-sanya-yalong-bay-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sctshhf",
+      "name": "Hilton Scottsdale Resort & Villas",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sctshhf-hilton-scottsdale-resort-and-villas/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sdxsehh",
+      "name": "Hilton Sedona Resort at Bell Rock",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sdxsehh-hilton-sedona-resort-at-bell-rock/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sezhihi",
+      "name": "Hilton Seychelles Northolme Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Africa",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sezhihi-hilton-seychelles-northolme-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "rrohihi",
+      "name": "Hilton Sorrento Palace",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/rrohihi-hilton-sorrento-palace/",
+      "coordinateSource": null
+    },
+    {
+      "code": "szzhihi",
+      "name": "Hilton Swinoujscie Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/szzhihi-hilton-swinoujscie-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "agatmhi",
+      "name": "Hilton Taghazout Bay Beach Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": null,
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/agatmhi-hilton-taghazout-bay-beach-resort-and-spa",
+      "coordinateSource": null
+    },
+    {
+      "code": "tngahhi",
+      "name": "Hilton Tangier Al Houara Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Africa",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/tngahhi-hilton-tangier-al-houara-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "tyotbtw",
+      "name": "Hilton Tokyo Bay",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/tyotbtw-hilton-tokyo-bay/",
+      "coordinateSource": null
+    },
+    {
+      "code": "cunhihh",
+      "name": "Hilton Tulum Riviera Maya All-Inclusive Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/cunhihh-hilton-tulum-riviera-maya-all-inclusive-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "pvrpahh",
+      "name": "Hilton Vallarta Riviera All-Inclusive Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/pvrpahh-hilton-vallarta-riviera-all-inclusive-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "faohihi",
+      "name": "Hilton Vilamoura As Cascatas Golf Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/faohihi-hilton-vilamoura-as-cascatas-golf-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "orfvhhf",
+      "name": "Hilton Virginia Beach Oceanfront",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/orfvhhf-hilton-virginia-beach-oceanfront/",
+      "coordinateSource": null
+    },
+    {
+      "code": "hnlwahf",
+      "name": "Hilton Waikiki Beach",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hnlwahf-hilton-waikiki-beach-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "koahwhh",
+      "name": "Hilton Waikoloa Village",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/koahwhh-hilton-waikoloa-village/",
+      "coordinateSource": null
+    },
+    {
+      "code": "ywsvrhf",
+      "name": "Hilton Whistler Resort & Spa",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/ywsvrhf-hilton-whistler-resort-and-spa/",
+      "coordinateSource": null
+    },
+    {
+      "code": "kdwyahi",
+      "name": "Hilton Yala Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/kdwyahi-hilton-yala-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "nkgyfhi",
+      "name": "Hilton Yuxi Fuxian Lake",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/nkgyfhi-hilton-yuxi-fuxian-lake/",
+      "coordinateSource": null
+    },
+    {
+      "code": "gmpikhi",
+      "name": "INSPIRE Entertainment Resort, A Hilton Partner Hotel",
+      "brand": "Hilton Hotels & Resorts",
+      "region": null,
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/gmpikhi-inspire-entertainment-resort",
+      "coordinateSource": null
+    },
+    {
+      "code": "oolhihi",
+      "name": "Surfers Paradise Hilton",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/oolhihi-hilton-surfers-paradise-hotel-and-residences/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sjucohh",
+      "name": "The Condado Plaza Hotel",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sjucohh-the-condado-plaza-hotel/",
+      "coordinateSource": null
+    },
+    {
+      "code": "denirhh",
+      "name": "The Inverness Denver, a Hilton Golf & Spa Resort",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/denirhh-the-inverness-denver-a-hilton-golf-and-spa-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "pnslghh",
+      "name": "The Lodge at Gulf State Park, a Hilton Hotel",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/pnslghh-the-lodge-at-gulf-state-park/",
+      "coordinateSource": null
+    },
+    {
+      "code": "hubwhhf",
+      "name": "The Waterfront Beach Resort, a Hilton Hotel",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hubwhhf-the-waterfront-beach-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "yqbmthw",
+      "name": "Homewood Suites by Hilton Mont-Tremblant Resort",
+      "brand": "Homewood Suites by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/yqbmthw-homewood-suites-mont-tremblant-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "phxbmol",
+      "name": "Arizona Biltmore, LXR Hotels & Resorts",
+      "brand": "LXR Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/phxbmol-arizona-biltmore/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sancnol",
+      "name": "Beach Village at The Del, LXR Hotels & Resorts",
+      "brand": "LXR Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sancnol-beach-village-at-the-del/",
+      "coordinateSource": null
+    },
+    {
+      "code": "oololol",
+      "name": "Imperial Hotel Gold Coast",
+      "brand": "LXR Hotels & Resorts",
+      "region": null,
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/oololol-imperial-hotel-gold-coast",
+      "coordinateSource": null
+    },
+    {
+      "code": "hnlwiol",
+      "name": "Ka La'i Waikiki Beach, LXR Hotels & Resorts",
+      "brand": "LXR Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/hnlwiol-ka-lai-waikiki-beach/",
+      "coordinateSource": null
+    },
+    {
+      "code": "dohqkol",
+      "name": "Katara Hills Doha, LXR Hotels & Resorts",
+      "brand": "LXR Hotels & Resorts",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dohqkol-katara-hills-doha/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sezitol",
+      "name": "Mango House Seychelles, LXR Hotels & Resorts",
+      "brand": "LXR Hotels & Resorts",
+      "region": "Africa",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sezitol-mango-house-seychelles/",
+      "coordinateSource": null
+    },
+    {
+      "code": "dohpaol",
+      "name": "Maysan Doha, LXR Hotels & Resorts",
+      "brand": "LXR Hotels & Resorts",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dohpaol-maysan-doha/",
+      "coordinateSource": null
+    },
+    {
+      "code": "sanrhol",
+      "name": "Shore House at The Del, LXR Hotels & Resorts",
+      "brand": "LXR Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sanrhol-shore-house-at-the-del/",
+      "coordinateSource": null
+    },
+    {
+      "code": "bjvlxol",
+      "name": "Susona Bodrum, LXR Hotels & Resorts",
+      "brand": "LXR Hotels & Resorts",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/bjvlxol-susona-bodrum/",
+      "coordinateSource": null
+    },
+    {
+      "code": "dpsolol",
+      "name": "Umana Bali, LXR Hotels & Resorts",
+      "brand": "LXR Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dpsolol-umana-bali-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "axazbol",
+      "name": "Zemi Beach House, LXR Hotels & Resorts",
+      "brand": "LXR Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/axazbol-zemi-beach-house/",
+      "coordinateSource": null
+    },
+    {
+      "code": "flldhsa",
+      "name": "Signia Hilton Diplomat Beach Resort",
+      "brand": "Signia Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/flldhsa-signia-diplomat-beach-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "satcnsa",
+      "name": "Signia Hilton La Cantera Resort & Spa",
+      "brand": "Signia Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/satcnsa-signia-la-cantera-resort-and-spa",
+      "coordinateSource": null
+    },
+    {
+      "code": "orlhhsa",
+      "name": "Signia Hilton Orlando Bonnet Creek",
+      "brand": "Signia Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/orlhhsa-signia-by-hilton-orlando-bonnet-creek",
+      "coordinateSource": null
+    },
+    {
+      "code": "bontrup",
+      "name": "Delfins Beach Resort Bonaire, Tapestry Collection by Hilton",
+      "brand": "Tapestry Collection by Hilton",
+      "region": null,
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/bontrup-delfins-beach-resort-bonaire",
+      "coordinateSource": null
+    },
+    {
+      "code": "dohkbup",
+      "name": "Fuwairit Kite Beach, Tapestry Collection by Hilton",
+      "brand": "Tapestry Collection by Hilton",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dohkbup-fuwairit-kite-beach",
+      "coordinateSource": null
+    },
+    {
+      "code": "myrobup",
+      "name": "The Ellie Beach Resort Myrtle Beach, Tapestry by Hilton",
+      "brand": "Tapestry Collection by Hilton",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/myrobup-the-ellie-beach-resort-myrtle-beach",
+      "coordinateSource": null
+    },
+    {
+      "code": "lirguwa",
+      "name": "Waldorf Astoria Costa Rica Punta Cacique",
+      "brand": "Waldorf Astoria Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/lirguwa-waldorf-astoria-costa-rica-punta-cacique",
+      "coordinateSource": null
+    },
+    {
+      "code": "dxbpdwa",
+      "name": "Waldorf Astoria Dubai Palm Jumeirah",
+      "brand": "Waldorf Astoria Hotels & Resorts",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dxbpdwa-waldorf-astoria-dubai-palm-jumeirah",
+      "coordinateSource": null
+    },
+    {
+      "code": "laswdwa",
+      "name": "Waldorf Astoria Las Vegas",
+      "brand": "Waldorf Astoria Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/laswdwa-waldorf-astoria-las-vegas",
+      "coordinateSource": null
+    },
+    {
+      "code": "sjdwawa",
+      "name": "Waldorf Astoria Los Cabos Pedregal",
+      "brand": "Waldorf Astoria Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sjdwawa-waldorf-astoria-los-cabos-pedregal",
+      "coordinateSource": null
+    },
+    {
+      "code": "dohqtwa",
+      "name": "Waldorf Astoria Lusail, Doha",
+      "brand": "Waldorf Astoria Hotels & Resorts",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dohqtwa-waldorf-astoria-doha-lusail",
+      "coordinateSource": null
+    },
+    {
+      "code": "mleonwa",
+      "name": "Waldorf Astoria Maldives Ithaafushi",
+      "brand": "Waldorf Astoria Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/mleonwa-waldorf-astoria-maldives-ithaafushi",
+      "coordinateSource": null
+    },
+    {
+      "code": "orlbcwa",
+      "name": "Waldorf Astoria Orlando",
+      "brand": "Waldorf Astoria Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/orlbcwa-waldorf-astoria-orlando",
+      "coordinateSource": null
+    },
+    {
+      "code": "slcdmwa",
+      "name": "Waldorf Astoria Park City",
+      "brand": "Waldorf Astoria Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/slcdmwa-waldorf-astoria-park-city",
+      "coordinateSource": null
+    },
+    {
+      "code": "rktwawa",
+      "name": "Waldorf Astoria Ras Al Khaimah",
+      "brand": "Waldorf Astoria Hotels & Resorts",
+      "region": "Middle East",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/rktwawa-waldorf-astoria-ras-al-khaimah",
+      "coordinateSource": null
+    },
+    {
+      "code": "cunwawa",
+      "name": "Waldorf Astoria Riveria Maya",
+      "brand": "Waldorf Astoria Hotels & Resorts",
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/cunwawa-waldorf-astoria-riviera-maya",
+      "coordinateSource": null
+    },
+    {
+      "code": "sezpiwa",
+      "name": "Waldorf Astoria Seychelles Platte Island",
+      "brand": "Waldorf Astoria Hotels & Resorts",
+      "region": "Africa",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/sezpiwa-waldorf-astoria-seychelles-platte-island",
+      "coordinateSource": null
+    },
+    {
+      "code": "cdgtpwa",
+      "name": "Waldorf Astoria Versailles - Trianon Palace",
+      "brand": "Waldorf Astoria Hotels & Resorts",
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/cdgtpwa-waldorf-astoria-versailles-trianon-palace",
+      "coordinateSource": null
+    },
+    {
+      "code": "jhmgwwa",
+      "name": "Grand Wailea, A Waldorf Astoria Resort",
+      "brand": null,
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/jhmgwwa-grand-wailea/",
+      "coordinateSource": null
+    },
+    {
+      "code": "snamowa",
+      "name": "Waldorf Astoria Monarch Beach",
+      "brand": null,
+      "region": "Americas",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/snamowa-waldorf-astoria-monarch-beach",
+      "coordinateSource": null
+    },
+    {
+      "code": "dlcdchi",
+      "name": "Hilton Dalian Golden Pebble Beach Resort",
+      "brand": null,
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/dlcdchi-hilton-dalian-golden-pebble-beach-resort/",
+      "coordinateSource": null
+    },
+    {
+      "code": "itmolol",
+      "name": "ROKU KYOTO, LXR Hotels & Resorts",
+      "brand": null,
+      "region": "Asia Pacific",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/itmolol-roku-kyoto/",
+      "coordinateSource": null
+    },
+    {
+      "code": "frahghi",
+      "name": "Hilton Frankfurt Gravenbruch",
+      "brand": null,
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/frahghi-hilton-frankfurt-gravenbruch/",
+      "coordinateSource": null
+    },
+    {
+      "code": "romhiwa",
+      "name": "Rome Cavalieri, A Waldorf Astoria Hotel",
+      "brand": null,
+      "region": "Europe",
+      "lat": null,
+      "lng": null,
+      "url": "https://www.hilton.com/en/hotels/romhiwa-rome-cavalieri",
+      "coordinateSource": null
+    }
+  ]
+}

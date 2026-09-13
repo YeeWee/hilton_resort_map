@@ -1,0 +1,126 @@
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  color: #1f2937;
+}
+
+#topbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+  background: #104da6;
+  color: #fff;
+}
+
+#topbar h1 { font-size: 16px; margin: 0; }
+
+#stats { font-size: 14px; opacity: 0.9; }
+
+#sidebar-toggle {
+  margin-left: auto;
+  padding: 4px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 6px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+#layout {
+  display: flex;
+  height: calc(100% - 41px);
+}
+
+#sidebar {
+  width: 320px;
+  flex: none;
+  overflow-y: auto;
+  border-right: 1px solid #e5e7eb;
+  background: #fafafa;
+}
+
+#layout.sidebar-collapsed #sidebar { display: none; }
+
+#map { flex: 1; }
+
+/* 品牌分组 */
+#brand-groups details {
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+#brand-groups summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  list-style: none;
+}
+
+#brand-groups summary::-webkit-details-marker { display: none; }
+
+.brand-count {
+  margin-left: auto;
+  color: #6b7280;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.chip {
+  width: 10px;
+  height: 10px;
+  flex: none;
+  border-radius: 50%;
+}
+
+/* 酒店列表项 */
+.hotel-item {
+  display: block;
+  width: 100%;
+  padding: 6px 12px 6px 30px;
+  border: 0;
+  background: none;
+  text-align: left;
+  font-size: 13px;
+  color: #374151;
+  cursor: pointer;
+}
+
+.hotel-item:hover:not(:disabled) { background: #eff6ff; }
+
+.hotel-item:disabled {
+  color: #9ca3af;
+  cursor: default;
+}
+
+.hotel-item small { display: block; color: #d1a72c; }
+
+/* marker 圆点 */
+.hotel-marker span {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* popup */
+.leaflet-popup-content { font-size: 13px; line-height: 1.6; }
+
+.popup-name { font-size: 14px; }
+
+.popup-brand .chip { display: inline-block; vertical-align: middle; margin-right: 4px; }
+
+.popup-link {
+  display: inline-block;
+  margin-top: 4px;
+  color: #104da6;
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<body>
+<!-- 结构镜像真实页面:#HotelsByBrand / #HotelsByRegion 各含一个垂直 tablist,
+     每个 tabpanel 服务端渲染全部链接,酒店链接为 hilton.com/en/hotels/<code>-<slug>/[...] -->
+<div id="HotelsByBrand" data-testid="BrandComponentThemeInline" class="surface-base">
+  <section class="hidden lg:block">
+    <h3>Hilton Resort Credit Eligible Hotels by hotel brand</h3>
+    <div role="tablist" aria-orientation="vertical">
+      <button id="tab-conrad" role="tab" aria-selected="true"><span>Conrad Hotels &amp; Resorts</span></button>
+      <button id="tab-hilton" role="tab" aria-selected="false"><span>Hilton Hotels &amp; Resorts</span></button>
+      <button id="tab-curio" role="tab" aria-selected="false"><span>Curio Collection by Hilton</span></button>
+    </div>
+    <div class="relative flex w-full flex-1">
+      <div id="tab-panel-conrad" aria-labelledby="tab-conrad" aria-hidden="false" role="tabpanel">
+        <p><a href="https://www.hilton.com/en/hotels/cuncici-conrad-tulum-riviera-maya/" class="link--base"><span class="underline-offset-2 underline inline-block">Conrad Tulum Riviera Maya</span></a></p>
+        <p><a href="https://www.hilton.com/en/hotels/rslvhvh-resorts-world-las-vegas/rooms/conrad-las-vegas/" class="link--base"><span class="underline-offset-2 underline inline-block">Conrad Las Vegas at Resorts World</span></a></p>
+      </div>
+      <div id="tab-panel-hilton" aria-labelledby="tab-hilton" aria-hidden="true" role="tabpanel">
+        <p><a href="https://www.hilton.com/en/hotels/rslvhvh-resorts-world-las-vegas" class="link--base"><span class="underline-offset-2 underline inline-block">Resorts World Las Vegas</span></a></p>
+        <p><a href="https://www.hilton.com/en/hotels/frahghi-hilton-frankfurt-gravenbruch/" class="link--base"><span class="underline-offset-2 underline inline-block">Hilton Frankfurt Gravenbruch</span></a></p>
+      </div>
+      <div id="tab-panel-curio" aria-labelledby="tab-curio" aria-hidden="true" role="tabpanel">
+        <p><a href="https://www.hilton.com/en/hotels/heribqq-aulus-chania-resort" class="link--base"><span class="underline-offset-2 underline inline-block">Aulus Chania Resort</span></a></p>
+      </div>
+    </div>
+  </section>
+</div>
+<div id="HotelsByRegion" data-testid="BrandComponentThemeInline" class="surface-base">
+  <section class="hidden lg:block">
+    <h3>Hilton Resort Credit Eligible Hotels by region</h3>
+    <div role="tablist" aria-orientation="vertical">
+      <button id="tab-americas" role="tab" aria-selected="true"><span>Americas</span></button>
+      <button id="tab-europe" role="tab" aria-selected="false"><span>Europe</span></button>
+    </div>
+    <div class="relative flex w-full flex-1">
+      <div id="tab-panel-americas" aria-labelledby="tab-americas" aria-hidden="false" role="tabpanel">
+        <p><a href="https://www.hilton.com/en/hotels/cuncici-conrad-tulum-riviera-maya/" class="link--base"><span class="underline-offset-2 underline inline-block">Conrad Tulum Riviera Maya</span></a></p>
+        <p><a href="https://www.hilton.com/en/hotels/rslvhvh-resorts-world-las-vegas/" class="link--base"><span class="underline-offset-2 underline inline-block">Conrad Las Vegas at Resorts World</span></a></p>
+        <p><a href="https://www.hilton.com/en/hotels/jhmgwwa-grand-wailea/" class="link--base"><span class="underline-offset-2 underline inline-block">Grand Wailea, A Waldorf Astoria Resort</span></a></p>
+      </div>
+      <div id="tab-panel-europe" aria-labelledby="tab-europe" aria-hidden="true" role="tabpanel">
+        <p><a href="https://www.hilton.com/en/hotels/frahghi-hilton-frankfurt-gravenbruch/" class="link--base"><span class="underline-offset-2 underline inline-block">Hilton Frankfurt Gravenbruch</span></a></p>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

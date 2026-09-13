@@ -1,0 +1,25 @@
+{
+  "name": "hilton_resort_map",
+  "version": "1.0.0",
+  "description": "把 Hilton 官方 Resort Credit Eligible Hotels 页面列出的酒店,按品牌呈现在一张 Leaflet 地图上",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build:data": "node scripts/build-data.mjs",
+    "start": "node scripts/serve.mjs",
+    "test": "node --test \"tests/*.test.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YeeWee/hilton_resort_map.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  },
+  "devDependencies": {
+    "leaflet": "^1.9.4",
+    "leaflet.markercluster": "^1.5.3",
+    "playwright": "^1.63.0"
+  }
+}
