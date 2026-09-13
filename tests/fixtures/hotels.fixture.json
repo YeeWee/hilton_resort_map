@@ -50,6 +50,26 @@
       "lng": null,
       "url": "https://www.hilton.com/en/hotels/nocoord-hotel-e/",
       "coordinateSource": null
+    },
+    {
+      "code": "shfhhh",
+      "name": "Hotel F Shanghai",
+      "brand": "Hilton Hotels & Resorts",
+      "region": "Asia Pacific",
+      "lat": 31.241,
+      "lng": 121.501,
+      "url": "https://www.hilton.com/en/hotels/shfhhh-hotel-f/",
+      "coordinateSource": "override"
+    },
+    {
+      "code": "sydgggg",
+      "name": "Hotel G Sydney",
+      "brand": null,
+      "region": "Asia Pacific",
+      "lat": -33.8688,
+      "lng": 151.2093,
+      "url": "https://www.hilton.com/en/hotels/sydgggg-hotel-g/",
+      "coordinateSource": "nominatim"
     }
   ]
 }
