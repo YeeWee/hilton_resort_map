@@ -56,6 +56,21 @@ test('JSON-LD 地理编码:无 geo、页面不存在时显式返回 null,不抛�
   assert.equal(await geocode({ code: 'gone99x', url: 'https://www.hilton.com/en/hotels/gone99x-vanished-hotel/' }), null);
 });
 
+test('JSON-LD 地理编码:连续 403 触发熔断,后续调用不再发请求(避免全量运行时空打被拒页面)', async () => {
+  const calls = [];
+  const fetchImpl = async (url) => {
+    calls.push(url);
+    return { ok: false, status: 403, text: async () => '' };
+  };
+  const geocode = createJsonLdGeocoder({ fetchImpl, delayMs: 0, logger: { warn() {} } });
+
+  for (let i = 0; i < 7; i++) {
+    assert.equal(await geocode({ code: `hot${i}xx`, url: `https://www.hilton.com/en/hotels/hot${i}xx-some-hotel/` }), null);
+  }
+
+  assert.equal(calls.length, 5, `前 5 次发请求,之后熔断;实际发了 ${calls.length} 次`);
+});
+
 test('连续编码时礼貌限速:两次请求间隔不小于 delayMs', async () => {
   const { fetchImpl, calls } = fakeFetch({
     'https://www.hilton.com/en/hotels/cuncici-conrad-tulum-riviera-maya/': withGeo,
@@ -77,12 +92,12 @@ test('Nominatim 回落:按酒店名查询,取首个结果的坐标,来源为 nom
     return {
       ok: true,
       status: 200,
-      json: async () => [{ lat: '20.3582784', lon: '-87.3375665', name: 'Conrad Tulum Riviera Maya' }],
+      json: async () => [{ lat: '20.3582784', lon: '-87.3375665', category: 'tourism', type: 'hotel', name: 'Conrad Tulum Riviera Maya' }],
     };
   };
 
   const geocode = createNominatimGeocoder({ fetchImpl: jsonFetch, delayMs: 0 });
-  const result = await geocode({ code: 'cuncici', name: 'Conrad Tulum Riviera Maya', url: 'https://www.hilton.com/en/hotels/cuncici-conrad-tulum-riviera-maya/' });
+  const result = await geocode({ code: 'cuncici', name: 'Conrad Tulum Riviera Maya', region: 'Americas', url: 'https://www.hilton.com/en/hotels/cuncici-conrad-tulum-riviera-maya/' });
 
   assert.deepEqual(result, { lat: 20.3582784, lng: -87.3375665, source: 'nominatim' });
   assert.match(calls[0].url, /nominatim\.openstreetmap\.org\/search\?format=jsonv2&limit=1&q=/);
@@ -99,6 +114,98 @@ test('Nominatim 回落:无结果、HTTP 错误、请求异常都显式返回 nul
   assert.equal(await geocode({ code: 'aaaaaaa', name: 'Unknown Hotel', url: 'u' }), null);
   assert.equal(await geocode({ code: 'bbbbbbb', name: 'Blocked Hotel', url: 'u' }), null);
   assert.equal(await geocode({ code: 'ccccccc', name: 'Offline Hotel', url: 'u' }), null);
+});
+
+test('Nominatim 回落:只接受酒店类 POI,拒绝城市边界等非酒店结果', async () => {
+  const jsonFetch = async () => ({
+    ok: true,
+    status: 200,
+    json: async () => [{ lat: '42.0095', lon: '12.8384', category: 'boundary', type: 'administrative', name: 'San Polo dei Cavalieri' }],
+  });
+  const geocode = createNominatimGeocoder({ fetchImpl: jsonFetch, delayMs: 0, logger: { warn() {} } });
+
+  assert.equal(await geocode({ code: 'romhiwa', name: 'Rome Cavalieri', region: 'Europe' }), null);
+});
+
+test('Nominatim 回落:结果落在酒店 Region 之外时拒绝(防同名误配)', async () => {
+  // Americas 酒店查到意大利的同名 POI → 拒绝
+  const jsonFetch = async () => ({
+    ok: true,
+    status: 200,
+    json: async () => [{ lat: '43.5378', lon: '11.4134', category: 'tourism', type: 'camp_site', name: 'Camping Village Orlando' }],
+  });
+  const geocode = createNominatimGeocoder({ fetchImpl: jsonFetch, delayMs: 0, logger: { warn() {} } });
+
+  assert.equal(await geocode({ code: 'orltuvh', name: 'Tuscany Village Orlando', region: 'Americas' }), null);
+  // Region 缺失时不做地区判断,仅类型守卫生效
+  assert.equal(
+    await geocode({ code: 'orltuvh', name: 'Tuscany Village Orlando', region: null }),
+    null,
+  );
+});
+
+test('Nominatim 回落:按名回落时先查全名,再查去掉 Hilton 品牌词的变体', async () => {
+  const queries = [];
+  const jsonFetch = async (url) => {
+    queries.push(decodeURIComponent(url.split('q=')[1]));
+    if (queries.length < 2) return { ok: true, status: 200, json: async () => [] };
+    return {
+      ok: true,
+      status: 200,
+      json: async () => [{ lat: '39.4772', lon: '-106.0502', category: 'tourism', type: 'hotel', name: 'Valdoro Mountain Lodge' }],
+    };
+  };
+  const geocode = createNominatimGeocoder({ fetchImpl: jsonFetch, delayMs: 0 });
+
+  const result = await geocode({
+    code: 'qkbvagv',
+    name: 'Hilton Grand Vacations Club Valdoro Mountain Lodge Breckenridge',
+    region: 'Americas',
+  });
+
+  assert.deepEqual(queries, [
+    'Hilton Grand Vacations Club Valdoro Mountain Lodge Breckenridge',
+    'Valdoro Mountain Lodge Breckenridge',
+  ]);
+  assert.deepEqual(result, { lat: 39.4772, lng: -106.0502, source: 'nominatim' });
+});
+
+test('Nominatim 回落:变体覆盖尾部品牌注记;全部变体失败才返回 null', async () => {
+  const queries = [];
+  const jsonFetch = async (url) => {
+    queries.push(decodeURIComponent(url.split('q=')[1]));
+    return { ok: true, status: 200, json: async () => [] };
+  };
+  const geocode = createNominatimGeocoder({ fetchImpl: jsonFetch, delayMs: 0, logger: { warn() {} } });
+
+  assert.equal(
+    await geocode({ code: 'flldhsa', name: 'Signia Hilton Diplomat Beach Resort', region: 'Americas' }),
+    null,
+  );
+  assert.deepEqual(queries, ['Signia Hilton Diplomat Beach Resort', 'Diplomat Beach Resort']);
+});
+
+test('Nominatim 回落:变体覆盖尾注 ", a Hilton Resort" 一类写法', async () => {
+  const queries = [];
+  const jsonFetch = async (url) => {
+    queries.push(decodeURIComponent(url.split('q=')[1]));
+    if (queries.length < 2) return { ok: true, status: 200, json: async () => [] };
+    return {
+      ok: true,
+      status: 200,
+      json: async () => [{ lat: '20.6831', lon: '-156.4413', category: 'tourism', type: 'hotel', name: 'Grand Wailea' }],
+    };
+  };
+  const geocode = createNominatimGeocoder({ fetchImpl: jsonFetch, delayMs: 0 });
+
+  const result = await geocode({
+    code: 'jhmgwwa',
+    name: 'Grand Wailea, A Waldorf Astoria Resort',
+    region: 'Americas',
+  });
+
+  assert.deepEqual(queries, ['Grand Wailea, A Waldorf Astoria Resort', 'Grand Wailea']);
+  assert.deepEqual(result, { lat: 20.6831, lng: -156.4413, source: 'nominatim' });
 });
 
 test('回落组合:首选失败时采用回落结果,来源跟随实际提供者', async () => {

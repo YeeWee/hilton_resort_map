@@ -1,0 +1,686 @@
+{
+  "hghyfci": {
+    "name": "Conrad Hangzhou Tonglu",
+    "lat": 29.7874,
+    "lng": 119.6806,
+    "note": "浙江杭州桐庐"
+  },
+  "kylcuqq": {
+    "name": "Baker's Cay Resort Key Largo, Curio Collection by Hilton",
+    "lat": 25.1076,
+    "lng": -80.4381,
+    "note": "Key Largo, FL"
+  },
+  "pjmcrqq": {
+    "name": "Botanika Osa Peninsula, Curio Collection by Hilton",
+    "lat": 8.54,
+    "lng": -83.305,
+    "note": "SE of Puerto Jiménez airport, Osa Peninsula, Costa Rica"
+  },
+  "napvpqq": {
+    "name": "Casa Mani Resort Napa Valley, Curio Collection by Hilton",
+    "lat": 38.3006,
+    "lng": -122.2895,
+    "note": "1075 California Blvd, Napa, CA"
+  },
+  "atlokqq": {
+    "name": "Cloudland at McLemore Resort Lookout Mountain, Curio",
+    "lat": 34.8579,
+    "lng": -85.3452,
+    "note": "Lookout Mountain, GA"
+  },
+  "herbsqq": {
+    "name": "Domes Aulus Elounda Resort, Curio by Hilton",
+    "lat": 35.2647,
+    "lng": 25.8791,
+    "note": "Elounda, Crete"
+  },
+  "mthfbqq": {
+    "name": "Faro Blanco Resort & Yacht Club Marathon, Curio by Hilton",
+    "lat": 24.7076,
+    "lng": -81.0917,
+    "note": "Marathon, FL"
+  },
+  "tlnspqq": {
+    "name": "Grand Hotel des Sablettes Plage, Curio Collection by Hilton",
+    "lat": 43.0901,
+    "lng": 5.9205,
+    "note": "Les Sablettes, La Seyne-sur-Mer, France"
+  },
+  "fllucqq": {
+    "name": "Hotel Maren Fort Lauderdale Beach, Curio Collection by Hilton",
+    "lat": 26.1445,
+    "lng": -80.1051,
+    "note": "Fort Lauderdale, FL"
+  },
+  "ctasiqq": {
+    "name": "Il Picciolo Etna Golf Resort & Spa, Curio Collection by Hilton",
+    "lat": 37.8335,
+    "lng": 15.0774,
+    "note": "Castiglione di Sicilia, Sicily"
+  },
+  "teaibqq": {
+    "name": "Indura Beach & Golf Resort Curio Collection by Hilton",
+    "lat": 15.7595,
+    "lng": -87.3566,
+    "note": "Playa Bonita, Tela, Honduras"
+  },
+  "athibqq": {
+    "name": "Isla Brown Corinthia Resort & Spa, Curio Collection by Hilton",
+    "lat": 37.942,
+    "lng": 22.97,
+    "note": "Agioi Theodoroi, Corinthia, Greece"
+  },
+  "skbkrqq": {
+    "name": "Koi Resort Saint Kitts, Curio Collection by Hilton",
+    "lat": 17.2886,
+    "lng": -62.7046,
+    "note": "Frigate Bay, Saint Kitts"
+  },
+  "psplqqq": {
+    "name": "La Quinta Resort & Club, Curio Collection by Hilton",
+    "lat": 33.6562,
+    "lng": -116.2904,
+    "note": "La Quinta, CA"
+  },
+  "rholiqq": {
+    "name": "Aulus Lindos Rhodes Resort, Curio Collection by Hilton",
+    "lat": 36.0925,
+    "lng": 28.0858,
+    "note": "Lindos, Rhodes"
+  },
+  "tzambqq": {
+    "name": "Mahogany Bay Resort & Beach Club, Curio Collection by Hilton",
+    "lat": 17.9142,
+    "lng": -87.9675,
+    "note": "San Pedro, Ambergris Caye, Belize"
+  },
+  "olbccqq": {
+    "name": "Mangias Santa Teresa Sardinia, Curio Collection by Hilton",
+    "lat": 41.2389,
+    "lng": 9.1929,
+    "note": "Santa Teresa Gallura, Sardinia"
+  },
+  "curryqq": {
+    "name": "Mangrove Beach Corendon Curacao All-Inclusive Resort, Curio",
+    "lat": 12.1786,
+    "lng": -68.9803,
+    "note": "Mangrove Beach, Curaçao"
+  },
+  "herniqq": {
+    "name": "Numo Ierapetra Beach Resort Crete, Curio Collection by Hilton",
+    "lat": 35.0106,
+    "lng": 25.7571,
+    "note": "Ierapetra, Crete"
+  },
+  "mlegsqq": {
+    "name": "SAii Lagoon Maldives, Curio Collection by Hilton",
+    "lat": 4.1836,
+    "lng": 73.4778,
+    "note": "Crossroads Maldives, Emboodhoo Lagoon"
+  },
+  "jtrsbqq": {
+    "name": "Sea Breeze Santorini Beach Resort, Curio Collection",
+    "lat": 36.3622,
+    "lng": 25.3968,
+    "note": "Vlychada, Santorini"
+  },
+  "jmkmbqq": {
+    "name": "Semeli Coast Mykonos, Curio Collection by Hilton",
+    "lat": 37.4321,
+    "lng": 25.3722,
+    "note": "Kalo Livadi, Mykonos"
+  },
+  "hghtmqq": {
+    "name": "Shu Hua Hotel Tianmu Mountain, Curio Collection by Hilton",
+    "lat": 30.3224,
+    "lng": 119.4413,
+    "note": "天目山, 杭州"
+  },
+  "syrslqq": {
+    "name": "Skaneateles Fields Resort & Spa, Curio Collection by Hilton",
+    "lat": 42.88,
+    "lng": -76.418,
+    "note": "1000 Mottville Rd, Skaneateles, NY"
+  },
+  "pgdchqq": {
+    "name": "Sunseeker Resort Florida Gulf Coast, Curio by Hilton",
+    "lat": 26.9307,
+    "lng": -82.0942,
+    "note": "Charlotte Harbor, Port Charlotte, FL"
+  },
+  "pgdssqq": {
+    "name": "Sunsuites Villas at Sunseeker Resort, Curio by Hilton",
+    "lat": 26.9297,
+    "lng": -82.0932,
+    "note": "Charlotte Harbor, Port Charlotte, FL"
+  },
+  "ibzseqq": {
+    "name": "The Club Cala San Miguel Hotel Ibiza, Curio Collection by Hilton",
+    "lat": 39.0622,
+    "lng": 1.4143,
+    "note": "Sant Miquel, Ibiza"
+  },
+  "curmgqq": {
+    "name": "The Rif at Mangrove Beach All-Inclusive, Curio by Hilton",
+    "lat": 12.1792,
+    "lng": -68.9811,
+    "note": "Mangrove Beach, Curaçao"
+  },
+  "herrsqq": {
+    "name": "The Royal Senses Resort Crete, Curio Collection by Hilton",
+    "lat": 35.3601,
+    "lng": 24.2495,
+    "note": "Kournas, Chania, Crete"
+  },
+  "phxssqq": {
+    "name": "The Scottsdale Resort and Spa, Curio Collection by Hilton",
+    "lat": 33.4883,
+    "lng": -111.9259,
+    "note": "Scottsdale, AZ"
+  },
+  "iahwrqq": {
+    "name": "The Woodlands® Resort, Curio Collection by Hilton",
+    "lat": 30.1652,
+    "lng": -95.4631,
+    "note": "The Woodlands, TX"
+  },
+  "pujmiqq": {
+    "name": "Zemi Miches Punta Cana All-Inclusive Resort, Curio by Hilton",
+    "lat": 18.9332,
+    "lng": -69.0961,
+    "note": "Playa Esmeralda, Miches, Dominican Republic"
+  },
+  "fllbmdt": {
+    "name": "Bahia Mar Fort Lauderdale Beach - a DoubleTree by Hilton",
+    "lat": 26.1191,
+    "lng": -80.1064,
+    "note": "Fort Lauderdale, FL"
+  },
+  "nornhdt": {
+    "name": "DoubleTree Beach Resort by Hilton Tampa Bay - North Redington Beach",
+    "lat": 27.8204,
+    "lng": -82.8204,
+    "note": "North Redington Beach, FL"
+  },
+  "hnlkadt": {
+    "name": "DoubleTree by Hilton Alana - Waikiki Beach",
+    "lat": 21.3007,
+    "lng": -157.8483,
+    "note": "Waikiki, Honolulu"
+  },
+  "goiabdi": {
+    "name": "DoubleTree by Hilton Goa - Arpora - Baga",
+    "lat": 15.5691,
+    "lng": 73.7643,
+    "note": "Arpora, Goa"
+  },
+  "pspdpdt": {
+    "name": "DoubleTree by Hilton Golf Resort Palm Springs",
+    "lat": 33.7957,
+    "lng": -116.496,
+    "note": "Cathedral City, CA"
+  },
+  "miaopdt": {
+    "name": "DoubleTree by Hilton Ocean Point Resort & Spa – North Miami",
+    "lat": 25.9422,
+    "lng": -80.1244,
+    "note": "Sunny Isles Beach, FL"
+  },
+  "yqbqcdt": {
+    "name": "DoubleTree by Hilton Quebec Resort",
+    "lat": 46.7381,
+    "lng": -71.4724,
+    "note": "Saint-Augustin-de-Desmaures, QC"
+  },
+  "iagdtdt": {
+    "name": "DoubleTree Fallsview Resort & Spa by Hilton - Niagara Falls",
+    "lat": 43.0888,
+    "lng": -79.0749,
+    "note": "6361 Fallsview Blvd, Niagara Falls, Ontario"
+  },
+  "nansidi": {
+    "name": "DoubleTree Resort by Hilton Fiji - Sonaisali Island",
+    "lat": -17.8306,
+    "lng": 177.3562,
+    "note": "Sonaisali Island, Nadi, Fiji"
+  },
+  "eywdtdt": {
+    "name": "DoubleTree Resort by Hilton Grand Key - Key West",
+    "lat": 24.5681,
+    "lng": -81.7562,
+    "note": "Key West, FL"
+  },
+  "lnswvdt": {
+    "name": "DoubleTree Resort by Hilton Lancaster",
+    "lat": 40.0613,
+    "lng": -76.2904,
+    "note": "Lancaster, PA"
+  },
+  "mcofhdt": {
+    "name": "DoubleTree Suites by Hilton Orlando - Disney Springs™ Area",
+    "lat": 28.4134,
+    "lng": -81.5042,
+    "note": "Hotel Plaza Blvd, Lake Buena Vista, FL"
+  },
+  "itohndt": {
+    "name": "Grand Naniloa Hotel Hilo - a DoubleTree by Hilton",
+    "lat": 19.7294,
+    "lng": -155.0592,
+    "note": "Hilo, Hawaii"
+  },
+  "deefles": {
+    "name": "Embassy Suites by Hilton Deerfield Beach Resort & Spa",
+    "lat": 26.3084,
+    "lng": -80.1103,
+    "note": "Deerfield Beach, FL"
+  },
+  "gspeses": {
+    "name": "Embassy Suites by Hilton Greenville Golf Resort & Conf Ctr",
+    "lat": 34.9105,
+    "lng": -82.3521,
+    "note": "Greenville, SC"
+  },
+  "mcostes": {
+    "name": "Embassy Suites by Hilton Orlando Sunset Walk",
+    "lat": 28.3371,
+    "lng": -81.4657,
+    "note": "Sunset Walk, Kissimmee, FL"
+  },
+  "orfanes": {
+    "name": "Embassy Suites by Hilton Virginia Beach Oceanfront Resort",
+    "lat": 36.8531,
+    "lng": -75.9792,
+    "note": "Virginia Beach, VA"
+  },
+  "ustboes": {
+    "name": "Embassy Suites St Augustine Beach Oceanfront Resort",
+    "lat": 29.8469,
+    "lng": -81.2664,
+    "note": "St. Augustine Beach, FL"
+  },
+  "hnlhwgv": {
+    "name": "Hilton Grand Vacations Club at Hilton Hawaiian Village",
+    "lat": 21.2874,
+    "lng": -157.8322,
+    "note": "Waikiki, Honolulu"
+  },
+  "yyzblgv": {
+    "name": "Hilton Grand Vacations Club Blue Mountain Canada",
+    "lat": 44.5042,
+    "lng": -80.3441,
+    "note": "Blue Mountain, Collingwood, Ontario"
+  },
+  "satergv": {
+    "name": "Hilton Vacation Club Eilan Resort & Spa San Antonio",
+    "lat": 29.6081,
+    "lng": -98.5652,
+    "note": "La Cantera, San Antonio, TX"
+  },
+  "lascsgv": {
+    "name": "Hilton Grand Vacations Club Elara Center Strip Las Vegas",
+    "lat": 36.1151,
+    "lng": -115.1743,
+    "note": "Center Strip, Las Vegas"
+  },
+  "lasflgv": {
+    "name": "Hilton Grand Vacations Club Flamingo Las Vegas",
+    "lat": 36.1174,
+    "lng": -115.1732,
+    "note": "Las Vegas Strip"
+  },
+  "hnlgwgv": {
+    "name": "Hilton Grand Vacations Club Grand Waikikian Honolulu",
+    "lat": 21.2876,
+    "lng": -157.8333,
+    "note": "Waikiki, Honolulu"
+  },
+  "vpssagv": {
+    "name": "Hilton Grand Vacations Club in Sandestin Golf & Beach Resort",
+    "lat": 30.3921,
+    "lng": -86.3141,
+    "note": "Sandestin, FL"
+  },
+  "koaklgv": {
+    "name": "Hilton Grand Vacations Club Kings' Land Waikoloa",
+    "lat": 19.9212,
+    "lng": -155.9141,
+    "note": "Waikoloa Beach Resort, Hawaii"
+  },
+  "sjdgvgv": {
+    "name": "Hilton Grand Vacations Club La Pacifica Los Cabos",
+    "lat": 23.023,
+    "lng": -109.7215,
+    "note": "Hilton Los Cabos campus, Km 19.5 Corridor"
+  },
+  "mcoubgv": {
+    "name": "Hilton Grand Vacations Club Las Palmeras Orlando",
+    "lat": 28.4212,
+    "lng": -81.4673,
+    "note": "Hotel Plaza Blvd, Kissimmee, FL"
+  },
+  "myrttgv": {
+    "name": "Hilton Grand Vacations Club Ocean 22 Myrtle Beach",
+    "lat": 33.7761,
+    "lng": -78.9902,
+    "note": "Myrtle Beach, SC"
+  },
+  "hhhgvgv": {
+    "name": "Hilton Grand Vacations Club Ocean Oak Resort Hilton Head",
+    "lat": 32.2311,
+    "lng": -80.7391,
+    "note": "Hilton Head Island, SC"
+  },
+  "koaotgv": {
+    "name": "Hilton Grand Vacations Club Ocean Tower Waikoloa Village",
+    "lat": 19.9362,
+    "lng": -156.0672,
+    "note": "Waikoloa, Hawaii"
+  },
+  "orlswgv": {
+    "name": "Hilton Grand Vacations Club SeaWorld® Orlando",
+    "lat": 28.4081,
+    "lng": -81.4692,
+    "note": "International Drive, Orlando, FL"
+  },
+  "hnldrgv": {
+    "name": "Hilton Grand Vacations Club The Grand Islander Waikiki Honolulu",
+    "lat": 21.2884,
+    "lng": -157.8343,
+    "note": "Waikiki, Honolulu"
+  },
+  "mcogvgv": {
+    "name": "Hilton Vacation Club The Fountains Orlando",
+    "lat": 28.4206,
+    "lng": -81.4864,
+    "note": "International Drive area, Orlando, FL"
+  },
+  "orlingv": {
+    "name": "Hilton Grand Vacations Club Tuscany Village Orlando",
+    "lat": 28.4342,
+    "lng": -81.4701,
+    "note": "International Drive, Orlando, FL"
+  },
+  "ywswhgv": {
+    "name": "Hilton Grand Vacations Club Whistler",
+    "lat": 50.1157,
+    "lng": -122.9494,
+    "note": "Sundial Crescent, Whistler Village, BC"
+  },
+  "mcotkgv": {
+    "name": "Hilton Vacation Club Aqua Sol Orlando West",
+    "lat": 28.3792,
+    "lng": -81.6425,
+    "note": "17777 Bali Blvd, Winter Garden, FL"
+  },
+  "mcotrgv": {
+    "name": "Hilton Vacation Club Cypress Pointe Orlando",
+    "lat": 28.4052,
+    "lng": -81.4973,
+    "note": "Lake Buena Vista, FL"
+  },
+  "sxmflgv": {
+    "name": "Hilton Vacation Club Flamingo Beach St. Maarten",
+    "lat": 18.031,
+    "lng": -63.093,
+    "note": "6 Billy Folly Rd, Pelican Key, Sint Maarten"
+  },
+  "mcobegv": {
+    "name": "Hilton Vacation Club Grand Beach Orlando",
+    "lat": 28.3921,
+    "lng": -81.5224,
+    "note": "Lake Buena Vista, FL"
+  },
+  "jhmkagv": {
+    "name": "Hilton Vacation Club Ka'anapali Beach Maui",
+    "lat": 20.9182,
+    "lng": -156.6901,
+    "note": "Ka'anapali, Maui"
+  },
+  "ismmygv": {
+    "name": "Hilton Vacation Club Mystic Dunes Orlando",
+    "lat": 28.3264,
+    "lng": -81.5351,
+    "note": "Celebration, FL"
+  },
+  "pspspgv": {
+    "name": "Hilton Vacation Club Palm Canyon Palm Springs",
+    "lat": 33.8242,
+    "lng": -116.5451,
+    "note": "Palm Springs, CA"
+  },
+  "phxragv": {
+    "name": "Hilton Vacation Club Rancho Manana Phoenix/Cave Creek",
+    "lat": 33.8331,
+    "lng": -111.9503,
+    "note": "Cave Creek, AZ"
+  },
+  "flgrigv": {
+    "name": "Hilton Vacation Club Ridge on Sedona",
+    "lat": 34.8452,
+    "lng": -111.7903,
+    "note": "Sedona, AZ"
+  },
+  "snarbgv": {
+    "name": "Hilton Vacation Club Riviera Beach & Shores",
+    "lat": 33.45902,
+    "lng": -117.67325,
+    "note": "34630 PCH, Capistrano Beach (Dana Point), CA"
+  },
+  "sxmrogv": {
+    "name": "Hilton Vacation Club Royal Palm St. Maarten",
+    "lat": 18.038,
+    "lng": -63.092,
+    "note": "Simpson Bay, Sint Maarten"
+  },
+  "flgsegv": {
+    "name": "Hilton Vacation Club Sedona Summit",
+    "lat": 34.8792,
+    "lng": -111.7763,
+    "note": "Sedona, AZ"
+  },
+  "phfpogv": {
+    "name": "Hilton Vacation Club The Historic Powhatan Williamsburg",
+    "lat": 37.2701,
+    "lng": -76.6862,
+    "note": "Williamsburg, VA"
+  },
+  "tushthh": {
+    "name": "El Conquistador Tucson, A Hilton Resort",
+    "lat": 32.3315,
+    "lng": -110.982,
+    "note": "10000 N Oracle Rd, Oro Valley, AZ"
+  },
+  "auahhhh": {
+    "name": "Hilton Aruba Caribbean Resort & Casino",
+    "lat": 12.5572,
+    "lng": -70.0538,
+    "note": "Palm Beach, Aruba"
+  },
+  "hhhrshh": {
+    "name": "Hilton Beachfront Resort and Spa Hilton Head Island",
+    "lat": 32.1572,
+    "lng": -80.7531,
+    "note": "Hilton Head Island, SC"
+  },
+  "miambhf": {
+    "name": "Hilton Cabana Miami Beach Resort",
+    "lat": 25.8052,
+    "lng": -80.1241,
+    "note": "Miami Beach, FL"
+  },
+  "cunqrhh": {
+    "name": "Hilton Cancun, an All-Inclusive Resort",
+    "lat": 21.1162,
+    "lng": -86.7423,
+    "note": "Punta Nizuc, Cancún"
+  },
+  "piecbhf": {
+    "name": "Hilton Clearwater Beach Resort & Spa",
+    "lat": 27.9872,
+    "lng": -82.8282,
+    "note": "Clearwater Beach, FL"
+  },
+  "dlmhrhi": {
+    "name": "Hilton Dalaman Sarigerme Resort & Spa",
+    "lat": 36.7132,
+    "lng": 28.6851,
+    "note": "Sarıgerme, Muğla"
+  },
+  "hghlrhi": {
+    "name": "Hilton Hangzhou Qiandao Lake Resort",
+    "lat": 29.6041,
+    "lng": 119.0361,
+    "note": "千岛湖, 淳安, 杭州"
+  },
+  "hnlhvhh": {
+    "name": "Hilton Hawaiian Village Waikiki Beach Resort",
+    "lat": 21.2861,
+    "lng": -157.8331,
+    "note": "Waikiki, Honolulu"
+  },
+  "ppthihh": {
+    "name": "Hilton Hotel Tahiti",
+    "lat": -17.5352,
+    "lng": -149.5653,
+    "note": "Pirae, Tahiti"
+  },
+  "sjdlchh": {
+    "name": "Hilton Los Cabos Beach & Golf Resort",
+    "lat": 23.0202,
+    "lng": -109.7221,
+    "note": "Cabo Real, Los Cabos"
+  },
+  "pptmlhh": {
+    "name": "Hilton Moorea Lagoon Resort and Spa",
+    "lat": -17.4889,
+    "lng": -149.8443,
+    "note": "Moorea"
+  },
+  "nkgnshi": {
+    "name": "Hilton Nanjing Niushoushan",
+    "lat": 31.8831,
+    "lng": 118.7421,
+    "note": "牛首山, 南京"
+  },
+  "phxtcpr": {
+    "name": "Hilton Phoenix Tapatio Cliffs Resort",
+    "lat": 33.5562,
+    "lng": -112.1121,
+    "note": "Phoenix, AZ"
+  },
+  "vdohohi": {
+    "name": "Hilton Quang Hanh Onsen Resort",
+    "lat": 20.9823,
+    "lng": 107.2027,
+    "note": "Quang Hanh, Quang Ninh, Vietnam (原 Yoko Onsen)"
+  },
+  "sqdhihi": {
+    "name": "Hilton Sanqingshan Resort",
+    "lat": 28.905,
+    "lng": 118.07,
+    "note": "外双溪南索道, 三清山, 玉山县, 江西"
+  },
+  "syxhihi": {
+    "name": "Hilton Sanya Yalong Bay Resort & Spa",
+    "lat": 18.2071,
+    "lng": 109.6441,
+    "note": "亚龙湾, 三亚"
+  },
+  "sezhihi": {
+    "name": "Hilton Seychelles Northolme Resort & Spa",
+    "lat": -4.6172,
+    "lng": 55.4381,
+    "note": "Glacis, Mahé, Seychelles"
+  },
+  "ywsvrhf": {
+    "name": "Hilton Whistler Resort & Spa",
+    "lat": 50.1142,
+    "lng": -122.9521,
+    "note": "Whistler Village, BC"
+  },
+  "nkgyfhi": {
+    "name": "Hilton Yuxi Fuxian Lake",
+    "lat": 24.4771,
+    "lng": 102.7941,
+    "note": "抚仙湖, 玉溪"
+  },
+  "gmpikhi": {
+    "name": "INSPIRE Entertainment Resort, A Hilton Partner Hotel",
+    "lat": 37.608,
+    "lng": 126.458,
+    "note": "127 Gonghangmunhwa-ro, Yeongjong-gu, Incheon"
+  },
+  "pnslghh": {
+    "name": "The Lodge at Gulf State Park, a Hilton Hotel",
+    "lat": 30.2311,
+    "lng": -87.6822,
+    "note": "Gulf State Park, Gulf Shores, AL"
+  },
+  "sancnol": {
+    "name": "Beach Village at The Del, LXR Hotels & Resorts",
+    "lat": 32.6781,
+    "lng": -117.1791,
+    "note": "Hotel del Coronado, San Diego"
+  },
+  "hnlwiol": {
+    "name": "Ka La'i Waikiki Beach, LXR Hotels & Resorts",
+    "lat": 21.2881,
+    "lng": -157.8383,
+    "note": "Waikiki, Honolulu"
+  },
+  "dohpaol": {
+    "name": "Maysan Doha, LXR Hotels & Resorts",
+    "lat": 25.4172,
+    "lng": 51.4902,
+    "note": "Lusail, Doha"
+  },
+  "sanrhol": {
+    "name": "Shore House at The Del, LXR Hotels & Resorts",
+    "lat": 32.6792,
+    "lng": -117.1772,
+    "note": "Hotel del Coronado, San Diego"
+  },
+  "bjvlxol": {
+    "name": "Susona Bodrum, LXR Hotels & Resorts",
+    "lat": 37.0931,
+    "lng": 27.4062,
+    "note": "Torba, Bodrum"
+  },
+  "myrobup": {
+    "name": "The Ellie Beach Resort Myrtle Beach, Tapestry by Hilton",
+    "lat": 33.688,
+    "lng": -78.908,
+    "note": "Springmaid Beach, Myrtle Beach, SC"
+  },
+  "lirguwa": {
+    "name": "Waldorf Astoria Costa Rica Punta Cacique",
+    "lat": 10.5781,
+    "lng": -85.6791,
+    "note": "Punta Cacique, Papagayo, Guanacaste"
+  },
+  "dohqtwa": {
+    "name": "Waldorf Astoria Lusail, Doha",
+    "lat": 25.4252,
+    "lng": 51.5052,
+    "note": "Lusail, Doha"
+  },
+  "cunwawa": {
+    "name": "Waldorf Astoria Riveria Maya",
+    "lat": 20.8231,
+    "lng": -86.8756,
+    "note": "Fed. 307 km 333, Puerto Morelos, Mexico"
+  },
+  "itmolol": {
+    "name": "ROKU KYOTO, LXR Hotels & Resorts",
+    "lat": 35.0601,
+    "lng": 135.7541,
+    "note": "Takagamine, Kita-ku, Kyoto"
+  },
+  "romhiwa": {
+    "name": "Rome Cavalieri, A Waldorf Astoria Hotel",
+    "lat": 41.9224,
+    "lng": 12.4146,
+    "note": "Monte Mario, Rome"
+  }
+}
