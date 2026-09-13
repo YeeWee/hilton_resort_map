@@ -682,5 +682,77 @@
     "lat": 41.9224,
     "lng": 12.4146,
     "note": "Monte Mario, Rome"
+  },
+  "fllcici": {
+    "name": "Conrad Fort Lauderdale Beach",
+    "lat": 26.1308181,
+    "lng": -80.1040988,
+    "note": "坐标取自上一轮 Nominatim 编码结果(本轮回落失败,防结果漂移)"
+  },
+  "mlehici": {
+    "name": "Conrad Maldives Rangali Island",
+    "lat": 3.6180832,
+    "lng": 72.723362,
+    "note": "坐标取自上一轮 Nominatim 编码结果(本轮回落失败,防结果漂移)"
+  },
+  "hevirdi": {
+    "name": "DoubleTree by Hilton Islantilla Beach Golf Resort",
+    "lat": 37.2155365,
+    "lng": -7.2305726,
+    "note": "坐标取自上一轮 Nominatim 编码结果(本轮回落失败,防结果漂移)"
+  },
+  "auajmes": {
+    "name": "Embassy Suites by Hilton Aruba Resort",
+    "lat": 12.5617165,
+    "lng": -70.0520986,
+    "note": "坐标取自上一轮 Nominatim 编码结果(本轮回落失败,防结果漂移)"
+  },
+  "gufbees": {
+    "name": "Embassy Suites by Hilton Gulf Shores Beach Resort",
+    "lat": 30.2487269,
+    "lng": -87.6909295,
+    "note": "坐标取自上一轮 Nominatim 编码结果(本轮回落失败,防结果漂移)"
+  },
+  "dxbjbhi": {
+    "name": "Hilton Dubai Jumeirah",
+    "lat": 25.0787477,
+    "lng": 55.1341077,
+    "note": "坐标取自上一轮 Nominatim 编码结果(本轮回落失败,防结果漂移)"
+  },
+  "glsgihf": {
+    "name": "Hilton Galveston Island Resort",
+    "lat": 29.2706595,
+    "lng": -94.8209774,
+    "note": "坐标取自上一轮 Nominatim 编码结果(本轮回落失败,防结果漂移)"
+  },
+  "mleaihi": {
+    "name": "Hilton Maldives Amingiri Resort & Spa",
+    "lat": 4.250032,
+    "lng": 73.3666135,
+    "note": "坐标取自上一轮 Nominatim 编码结果(本轮回落失败,防结果漂移)"
+  },
+  "sjucohh": {
+    "name": "The Condado Plaza Hotel",
+    "lat": 35.9783748,
+    "lng": -114.8358507,
+    "note": "坐标取自上一轮 Nominatim 编码结果(本轮回落失败,防结果漂移)"
+  },
+  "oololol": {
+    "name": "Imperial Hotel Gold Coast",
+    "lat": -27.9670631,
+    "lng": 153.4257437,
+    "note": "坐标取自上一轮 Nominatim 编码结果(本轮回落失败,防结果漂移)"
+  },
+  "sjdwawa": {
+    "name": "Waldorf Astoria Los Cabos Pedregal",
+    "lat": 22.8749934,
+    "lng": -109.9116568,
+    "note": "坐标取自上一轮 Nominatim 编码结果(本轮回落失败,防结果漂移)"
+  },
+  "mleonwa": {
+    "name": "Waldorf Astoria Maldives Ithaafushi",
+    "lat": 4.0144201,
+    "lng": 73.3825681,
+    "note": "坐标取自上一轮 Nominatim 编码结果(本轮回落失败,防结果漂移)"
   }
 }
