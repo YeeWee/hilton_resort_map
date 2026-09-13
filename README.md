@@ -5,13 +5,15 @@
 ## 目录结构
 
 ```
-index.html + assets/     纯静态页面(Leaflet / markercluster 走 CDN,底图 CARTO Voyager),零构建
+index.html + assets/     纯静态页面(底图 CARTO Voyager),零构建,JS/CSS 零外链
+vendor/                  第三方库 dist 产物(leaflet / leaflet.markercluster),由 npm run vendor 同步入库
 scripts/build-data.mjs   数据管线 CLI
 scripts/serve.mjs        零依赖静态服务器(本地预览与页面测试共用)
+scripts/vendor.mjs       零依赖 vendor 同步脚本(node_modules → vendor/,--check 只校验)
 src/                     管线核心:页面解析、地理编码(回落链)、国家逆编码、overrides 合并
 data/hotels.json         生成产物,随代码一并入库;页面运行时 fetch 它
 data/overrides.json      人工坐标 overrides(维护指南见下)
-tests/                   两条测试接缝(test seam),全程不碰网络
+tests/                   测试接缝(test seam),全程不碰网络
 ```
 
 ## 前置要求
@@ -34,10 +36,22 @@ npm start          # 启动本地预览,默认 http://localhost:8000/
 npm test
 ```
 
-两条接缝,全程不碰网络:
+两条页面接缝 + vendor 脚本接缝,全程不碰网络:
 
 1. **管线整体**:保存的页面 HTML fixture + 注入的假地理编码器/国家逆编码器 → 断言 `data/hotels.json` 契约(品牌齐全、hotel code 去重、Region 合并、国家与大洲派生、总数守恒、失败显式标记)。
-2. **页面整体**:headless Chrome 加载页面 + fixture 版 hotels.json → 断言用户可见的 DOM 行为(marker 总数、图例筛选、大洲/国家勾选与 AND 叠加、树计数联动、重置、聚合展开、popup 字段、侧边栏定位、统计行)。CDN 与底图在路由层由本地副本应答。
+2. **页面整体**:headless Chrome 加载页面 + fixture 版 hotels.json → 断言用户可见的 DOM 行为(marker 总数、图例筛选、大洲/国家勾选与 AND 叠加、树计数联动、重置、聚合展开、popup 字段、侧边栏定位、统计行)。底图瓦片在路由层由本地副本应答;第三方库与页面同源加载,任何回潮的外链资源都会让"全程不碰网络"断言变红(另有静态断言禁止 index.html 引用外链 `<link>` / `<script>`)。
+3. **vendor 同步**:`node scripts/vendor.mjs --check` 校验 vendor/ 产物与 node_modules 逐字节一致、版本记录一致(见下节)。
+
+## 第三方库升级动线
+
+Leaflet 与 leaflet.markercluster 的 dist 产物自托管在顶层 `vendor/`(决策见 [ADR-0001](docs/adr/0001-self-host-leaflet-and-markercluster.md)):index.html 引用同源相对路径、不带版本号,升级库时页面零改动;版本的唯一事实来源是 `package.json` 与 lockfile,`vendor/VERSIONS.json` 只供 git diff 阅读。
+
+```bash
+npm update leaflet leaflet.markercluster   # 1. 升级 npm 包
+npm run vendor                             # 2. 同步 dist 产物与 VERSIONS.json 入 vendor/
+npm test                                   # 3. 全量测试(--check 校验一致性)
+git add vendor/ package-lock.json          # 4. 提交 vendor/ 与 lockfile
+```
 
 ## 重跑管线(名单更新后)
 

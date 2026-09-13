@@ -7,19 +7,11 @@ import { chromium } from 'playwright';
 import { createStaticServer } from '../scripts/serve.mjs';
 
 // 接缝 2(页面整体):headless 浏览器加载页面 + fixture 版 hotels.json,
-// 断言用户可见的 DOM 行为。所有外部请求(Leaflet CDN、CARTO 底图)在路由层
-// 由本地副本应答,fixture JSON 注入数据;全程不碰网络。
+// 断言用户可见的 DOM 行为。第三方库与页面同源加载(vendor/),底图瓦片(CARTO)
+// 在路由层由本地副本应答,fixture JSON 注入数据;全程不碰网络——
+// 任何回潮的外链资源(unpkg 等)都会落入 externalRequests 让测试变红。
 
 const repoRoot = fileURLToPath(new URL('..', import.meta.url));
-
-const CDN_FILES = {
-  // 与 index.html 引用的 CDN 版本一一对应,升级时两处同步
-  'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css': 'node_modules/leaflet/dist/leaflet.css',
-  'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js': 'node_modules/leaflet/dist/leaflet.js',
-  'https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css': 'node_modules/leaflet.markercluster/dist/MarkerCluster.css',
-  'https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css': 'node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css',
-  'https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js': 'node_modules/leaflet.markercluster/dist/leaflet.markercluster.js',
-};
 
 const TILE_PNG =
   'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
@@ -40,9 +32,6 @@ async function openPage(t) {
   const tileRequests = [];
   await context.route('**/*', async (route) => {
     const url = route.request().url();
-    if (url in CDN_FILES) {
-      return route.fulfill({ path: `${repoRoot}/${CDN_FILES[url]}` });
-    }
     if (url.includes('/data/hotels.json')) {
       return route.fulfill({ body: fixtureJson, contentType: 'application/json; charset=utf-8' });
     }
@@ -133,7 +122,7 @@ test('页面整体:fixture JSON → marker/聚合/popup/侧边栏三级树/统�
   assert.equal(await noCoords.isDisabled(), true);
   assert.match(await noCoords.innerText(), /暂无坐标/);
 
-  // 测试全程不碰网络:所有请求都被本地应答
+  // 测试全程不碰网络:同源请求之外的一切(包括回潮的 unpkg 外链)都被记录且为空
   assert.deepEqual(externalRequests, []);
 });
 
@@ -236,7 +225,7 @@ test('页面整体:国家勾选与品牌图例 AND 叠加,树计数联动,重置
   assert.equal(legendColor, markerColor);
   assert.equal(legendColor, popupChipColor);
 
-  // 测试全程不碰网络:所有请求都被本地应答
+  // 测试全程不碰网络:同源请求之外的一切(包括回潮的 unpkg 外链)都被记录且为空
   assert.deepEqual(externalRequests, []);
 });
 
@@ -254,4 +243,13 @@ test('页面整体:底图瓦片请求携带 CARTO api key', async (t) => {
     tileRequests.every((url) => url.includes('key=cb1_3j9m_1_9b078866ec04f2fd9b6a45d4')),
     `瓦片请求应携带 api key:首条 ${tileRequests[0]}`,
   );
+});
+
+// 静态断言:只看 index.html 的事实——<link href> / <script src> 不得引用 http(s)
+// 或协议相对(//host)外链资源(<a> 链接不限),守住"JS/CSS 全部自托管"不被无声破坏。
+test('页面静态:index.html 的 <link>/<script> 不得引用外链资源', async () => {
+  const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+  const tags = html.match(/<(?:link|script)\b[^>]*>/gi) ?? [];
+  const externals = tags.filter((tag) => /\s(?:href|src)\s*=\s*["'](?:https?:)?\/\//i.test(tag));
+  assert.deepEqual(externals, [], `index.html 不得引用外链资源(自托管见 scripts/vendor.mjs):${externals.join(' ; ')}`);
 });

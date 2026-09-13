@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hilton Resort Credit 合格酒店地图</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="vendor/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="vendor/leaflet.markercluster/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="vendor/leaflet.markercluster/dist/MarkerCluster.Default.css" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -25,9 +25,8 @@
     </aside>
     <div id="map" aria-label="地图"></div>
   </div>
-  <!-- CDN 版本与 tests/page.test.js 的 CDN_FILES 本地副本一一对应,升级时两处同步 -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="vendor/leaflet/dist/leaflet.js"></script>
+  <script src="vendor/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
   <script src="assets/main.js" defer></script>
 </body>
 </html>
