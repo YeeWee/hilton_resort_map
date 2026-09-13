@@ -37,6 +37,7 @@ async function openPage(t) {
   t.after(() => context.close());
 
   const externalRequests = [];
+  const tileRequests = [];
   await context.route('**/*', async (route) => {
     const url = route.request().url();
     if (url in CDN_FILES) {
@@ -46,6 +47,7 @@ async function openPage(t) {
       return route.fulfill({ body: fixtureJson, contentType: 'application/json; charset=utf-8' });
     }
     if (url.includes('basemaps.cartocdn.com')) {
+      tileRequests.push(url);
       return route.fulfill({ body: Buffer.from(TILE_PNG, 'base64'), contentType: 'image/png' });
     }
     if (url.startsWith(baseUrl)) {
@@ -58,7 +60,7 @@ async function openPage(t) {
   const page = await context.newPage();
   t.after(() => page.close());
   await page.goto(`${baseUrl}/index.html`, { waitUntil: 'load' });
-  return { page, externalRequests };
+  return { page, externalRequests, tileRequests };
 }
 
 // fixture 名单(7 家):Conrad×2 与 Hilton×1 同在上海(共 3 家聚成一簇),
@@ -218,4 +220,20 @@ test('页面整体:图例筛选 → 品牌显隐与簇计数联动、配色一�
 
   // 测试全程不碰网络:所有请求都被本地应答
   assert.deepEqual(externalRequests, []);
+});
+
+test('页面整体:底图瓦片请求携带 CARTO api key', async (t) => {
+  const { page, tileRequests } = await openPage(t);
+
+  // 等首块瓦片真正加载完成,再核对实际发出的请求 URL
+  await page.waitForFunction(() => document.querySelector('.leaflet-tile-loaded') !== null);
+  assert.ok(tileRequests.length > 0, '应发出底图瓦片请求');
+  assert.ok(
+    tileRequests.every((url) => url.includes('/rastertiles/voyager/')),
+    `底图应仍走 voyager rastertiles:首条 ${tileRequests[0]}`,
+  );
+  assert.ok(
+    tileRequests.every((url) => url.includes('key=cb1_3j9m_1_9b078866ec04f2fd9b6a45d4')),
+    `瓦片请求应携带 api key:首条 ${tileRequests[0]}`,
+  );
 });

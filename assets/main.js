@@ -125,7 +125,7 @@ function renderSidebar(hotels, markers) {
 
 const map = L.map('map', { center: [30, 20], zoom: 2, worldCopyJump: true });
 
-L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=cb1_3j9m_1_9b078866ec04f2fd9b6a45d4', {
   subdomains: 'abcd',
   maxZoom: 19,
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
