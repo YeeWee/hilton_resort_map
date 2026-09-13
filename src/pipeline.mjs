@@ -1,16 +1,21 @@
 import { parsePage } from './parse-page.mjs';
+import { COUNTRY_META } from './countries.mjs';
 
-// 接缝 1(管线整体):输入 = 保存的页面 HTML + 注入的地理编码器 + 人工 overrides;输出 = hotels.json。
+// 接缝 1(管线整体):输入 = 保存的页面 HTML + 注入的地理编码器 + 注入的国家逆编码器 + 人工 overrides;输出 = hotels.json。
 // 数据全集 = 页面两个 tab 列出的全部酒店(并集),不多不少;唯一性以 hotel code 为准。
 
-// 每家酒店的输出契约:code / name / brand / region / lat / lng / url / coordinateSource
+// 每家酒店的输出契约:code / name / brand / region / countryCode / country / continent / lat / lng / url / coordinateSource
 // coordinateSource:json-ld | nominatim | override | failed(已尝试但两轮都失败)| null(未尝试)
+// countryCode / country / continent:按坐标逆地理编码判定的国家与大洲(见 CONTEXT.md),无坐标或判定失败时为 null
 function toHotel(entry, brand, region) {
   return {
     code: entry.code,
     name: entry.name,
     brand,
     region,
+    countryCode: null,
+    country: null,
+    continent: null,
     lat: null,
     lng: null,
     url: entry.url,
@@ -18,7 +23,7 @@ function toHotel(entry, brand, region) {
   };
 }
 
-export async function buildHotels({ html, geocode, overrides = {}, maxGeocode = Infinity }) {
+export async function buildHotels({ html, geocode, resolveCountry, overrides = {}, maxGeocode = Infinity }) {
   const { brandGroups, regionGroups } = parsePage(html);
 
   const regionByCode = new Map();
@@ -73,5 +78,31 @@ export async function buildHotels({ html, geocode, overrides = {}, maxGeocode = 
     }
   }
 
-  return { generatedAt: new Date().toISOString(), hotels };
+  // 国家与大洲:坐标就绪后逐家逆地理编码(含 override 坐标),映射表给出中文名与大洲;
+  // 无坐标、编码失败或代码不在映射表时保持 null(页面归入"未标注国家"/"未标注大洲")
+  const unmappedCountryCodes = new Map();
+  if (resolveCountry) {
+    for (const hotel of hotels) {
+      if (hotel.lat == null || hotel.lng == null) continue;
+      const countryCode = await resolveCountry(hotel);
+      if (!countryCode) continue;
+      const normalized = countryCode.toUpperCase();
+      hotel.countryCode = normalized;
+      const meta = COUNTRY_META[normalized];
+      if (meta) {
+        hotel.country = meta.name;
+        hotel.continent = meta.continent;
+      } else {
+        unmappedCountryCodes.set(countryCode, (unmappedCountryCodes.get(countryCode) ?? 0) + 1);
+      }
+    }
+  }
+
+  return {
+    generatedAt: new Date().toISOString(),
+    hotels,
+    unmappedCountryCodes: [...unmappedCountryCodes.entries()]
+      .map(([code, count]) => ({ code, count }))
+      .sort((a, b) => a.code.localeCompare(b.code)),
+  };
 }

@@ -50,12 +50,62 @@ test('hotel code 去重:跨品牌重复归首个品牌组;仅 region tab 有的�
       name: 'Grand Wailea, A Waldorf Astoria Resort',
       brand: null,
       region: 'Americas',
+      countryCode: null,
+      country: null,
+      continent: null,
       lat: null,
       lng: null,
       url: 'https://www.hilton.com/en/hotels/jhmgwwa-grand-wailea/',
       coordinateSource: null,
     },
   );
+});
+
+test('国家派生:坐标就绪的酒店经逆编码得 ISO 代码,映射表给出中文名与大洲', async () => {
+  const geocode = async (hotel) =>
+    hotel.code === 'cuncici'
+      ? { lat: 20.1308, lng: -87.4663, source: 'json-ld' }
+      : hotel.code === 'rslvhvh'
+        ? { lat: 36.1147, lng: -115.1728, source: 'nominatim' }
+        : null;
+  const resolveCountryCalls = [];
+  const resolveCountry = async (hotel) => {
+    resolveCountryCalls.push(hotel.code);
+    if (hotel.code === 'cuncici') return 'mx'; // 小写也应归一为大写
+    if (hotel.code === 'rslvhvh') return 'XX'; // 映射表外的代码
+    if (hotel.code === 'heribqq') return 'GR'; // override 坐标同样参与判定
+    return null; // 逆编码失败
+  };
+
+  // heribqq 走人工 override 坐标,同样应参与国家判定
+  const overrides = { heribqq: { lat: 35.5168, lng: 24.0999 } };
+  const { hotels, unmappedCountryCodes } = await buildHotels({
+    html: fixtureHtml, geocode, resolveCountry, overrides, maxGeocode: 2,
+  });
+
+  const tulum = hotels.find((h) => h.code === 'cuncici');
+  assert.deepEqual([tulum.countryCode, tulum.country, tulum.continent], ['MX', '墨西哥', '北美洲']);
+
+  const lasVegas = hotels.find((h) => h.code === 'rslvhvh');
+  assert.deepEqual([lasVegas.countryCode, lasVegas.country, lasVegas.continent], ['XX', null, null]);
+
+  // override 坐标同样判定国家
+  const chania = hotels.find((h) => h.code === 'heribqq');
+  assert.deepEqual([chania.countryCode, chania.country, chania.continent], ['GR', '希腊', '欧洲']);
+
+  // 无坐标酒店不做国家判定;逆编码失败保持 null
+  assert.deepEqual(resolveCountryCalls.sort(), ['cuncici', 'heribqq', 'rslvhvh']);
+  const frankfurt = hotels.find((h) => h.code === 'frahghi');
+  assert.deepEqual([frankfurt.countryCode, frankfurt.country, frankfurt.continent], [null, null, null]);
+
+  // 映射表外的代码在返回值里报告,供补表
+  assert.deepEqual(unmappedCountryCodes, [{ code: 'XX', count: 1 }]);
+});
+
+test('国家派生:未注入逆编码器时字段保持 null(向后兼容)', async () => {
+  const { hotels } = await buildHotels({ html: fixtureHtml, geocode: async () => null, maxGeocode: 0 });
+
+  assert.ok(hotels.every((h) => h.countryCode === null && h.country === null && h.continent === null));
 });
 
 test('注入假地理编码器:按页面顺序只对前 maxGeocode 家取坐标,成功记来源', async () => {

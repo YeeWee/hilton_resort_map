@@ -17,7 +17,11 @@
   </header>
   <div id="layout">
     <aside id="sidebar" aria-label="酒店列表">
-      <nav id="brand-groups"></nav>
+      <div id="geo-toolbar">
+        <span id="geo-hint">大洲 / 国家(勾选筛选)</span>
+        <button id="geo-reset" type="button">重置筛选</button>
+      </div>
+      <nav id="geo-tree"></nav>
     </aside>
     <div id="map" aria-label="地图"></div>
   </div>

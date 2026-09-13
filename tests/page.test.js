@@ -63,14 +63,14 @@ async function openPage(t) {
   return { page, externalRequests, tileRequests };
 }
 
-// fixture 名单(7 家):Conrad×2 与 Hilton×1 同在上海(共 3 家聚成一簇),
-// DoubleTree 柏林、无品牌悉尼各自独立,Hilton×1 无坐标不上图。
+// fixture 名单(7 家):Conrad×2 与 Hilton×1 同在上海(共 3 家聚成一簇,国家均为中国),
+// DoubleTree 柏林、Hilton 纽约、无品牌悉尼各自独立,Hilton×1 无坐标不上图、国家亦未标注。
 
-test('页面整体:fixture JSON → marker/聚合/popup/侧边栏定位/统计', async (t) => {
+test('页面整体:fixture JSON → marker/聚合/popup/侧边栏三级树/统计', async (t) => {
   const { page, externalRequests } = await openPage(t);
 
-  // 统计行:共 N 家 / M 个品牌(与 fixture 名单一致:7 家 / 3 个品牌)
-  await page.waitForSelector('#stats:has-text("共 7 家 / 3 个品牌")');
+  // 统计行:共 N 家 / M 个品牌 / K 个国家(7 家 / 3 个品牌 / 4 个国家,无坐标酒店不计国家)
+  await page.waitForSelector('#stats:has-text("共 7 家 / 3 个品牌 / 4 个国家")');
 
   // 初始低缩放:上海三家聚合成 1 个簇(计数 3),柏林/纽约/悉尼各自独立 marker
   await page.waitForFunction(() => document.querySelectorAll('.hotel-marker').length === 3);
@@ -87,36 +87,48 @@ test('页面整体:fixture JSON → marker/聚合/popup/侧边栏定位/统计',
   await page.waitForFunction(() => document.querySelectorAll('.marker-cluster').length === 1);
 
   // 点击簇展开聚合(用户视角的"缩放展开"):簇消失,被聚合的三家分开显示
-  // (markercluster 只把视口内的子 marker 渲染进 DOM,故此处计数为视口内的 3 家)
   await page.locator('.marker-cluster').click();
   await page.waitForFunction(
     () => document.querySelectorAll('.marker-cluster').length === 0
       && document.querySelectorAll('.hotel-marker').length === 3,
   );
 
-  // 直接点击 marker 弹出 popup:含酒店名/Brand/Region/官网链接
+  // 直接点击 marker 弹出 popup:含酒店名/Brand/地区(Region · 国家)/官网链接
   await page.locator('.hotel-marker').first().click();
   const popup = page.locator('.leaflet-popup-content');
   await popup.waitFor();
   const popupText = await popup.innerText();
   assert.match(popupText, /品牌/);
-  assert.match(popupText, /地区/);
+  assert.match(popupText, /地区:Asia Pacific · 中国/);
   assert.ok(await popup.locator('a[href^="https://www.hilton.com/"]').first().getAttribute('href'));
 
-  // 侧边栏按 Brand 分组,组头含品牌名与数量;无品牌酒店归入"未标注品牌"置底
-  const conradGroup = page.locator('#brand-groups details', { hasText: 'Conrad Hotels & Resorts' });
-  assert.equal(await conradGroup.count(), 1);
-  assert.match(await conradGroup.locator('summary').innerText(), /2/);
-  assert.equal(await page.locator('#brand-groups details').count(), 4);
+  // 侧边栏大洲→国家→酒店三级树:大洲数量降序、未标注置底,组头带计数
+  const continentNames = await page.locator('#geo-tree .continent-group > summary .geo-name').allInnerTexts();
+  assert.deepEqual(continentNames, ['亚洲', '北美洲', '大洋洲', '欧洲', '未标注大洲']);
+  const asia = page.locator('#geo-tree .continent-group', { hasText: '亚洲' });
+  assert.match(await asia.locator('> summary').innerText(), /3 家/);
 
-  // 侧边栏分组默认折叠;展开 Hilton 组后点击列表项 → 地图定位并打开该酒店的 popup
-  const hiltonGroup = page.locator('#brand-groups details', { hasText: 'Hilton Hotels & Resorts' });
-  await hiltonGroup.locator('summary').click();
-  await page.locator('#brand-groups button', { hasText: 'Hotel D New York' }).click();
+  // 展开亚洲 → 中国;展开中国 → 3 家酒店
+  await asia.locator('> summary').click();
+  const china = asia.locator('.country-group', { hasText: '中国' });
+  assert.equal(await china.count(), 1);
+  assert.match(await china.locator('> summary').innerText(), /3 家/);
+  await china.locator('> summary').click();
+  assert.equal(await china.locator('.hotel-item').count(), 3);
+
+  // 展开北美洲 → 美国,点击纽约酒店 → 地图定位并打开该酒店的 popup
+  const northAmerica = page.locator('#geo-tree .continent-group', { hasText: '北美洲' });
+  await northAmerica.locator('> summary').click();
+  await northAmerica.locator('.country-group', { hasText: '美国' }).locator('> summary').click();
+  await northAmerica.locator('.hotel-item', { hasText: 'Hotel D New York' }).click();
   await page.waitForFunction(() => document.querySelector('.leaflet-popup-content')?.textContent.includes('Hotel D New York'));
 
-  // 无坐标酒店:侧边栏列出但不可定位
-  const noCoords = page.locator('#brand-groups button', { hasText: 'Hotel E No Coords' });
+  // 无坐标酒店:列在"未标注大洲 → 未标注国家"下但不可定位
+  const unknown = page.locator('#geo-tree .continent-group', { hasText: '未标注大洲' });
+  await unknown.locator('> summary').click();
+  const unknownCountry = unknown.locator('.country-group', { hasText: '未标注国家' });
+  await unknownCountry.locator('> summary').click();
+  const noCoords = unknownCountry.locator('.hotel-item', { hasText: 'Hotel E No Coords' });
   assert.equal(await noCoords.count(), 1);
   assert.equal(await noCoords.isDisabled(), true);
   assert.match(await noCoords.innerText(), /暂无坐标/);
@@ -125,98 +137,104 @@ test('页面整体:fixture JSON → marker/聚合/popup/侧边栏定位/统计',
   assert.deepEqual(externalRequests, []);
 });
 
-test('页面整体:图例筛选 → 品牌显隐与簇计数联动、配色一致', async (t) => {
+test('页面整体:国家勾选与品牌图例 AND 叠加,树计数联动,重置一键勾回', async (t) => {
   const { page, externalRequests } = await openPage(t);
 
-  await page.waitForSelector('#stats:has-text("共 7 家 / 3 个品牌")');
+  await page.waitForSelector('#stats:has-text("共 7 家 / 3 个品牌 / 4 个国家")');
   await page.waitForFunction(() => document.querySelectorAll('.hotel-marker').length === 3);
   assert.equal((await page.locator('.marker-cluster').innerText()).trim(), '3');
 
-  // 图例显示全部品牌及各自酒店数量(与侧边栏同口径,含无坐标酒店),
-  // 排序一致:数量降序,未标注品牌置底
-  const legendItems = page.locator('#legend .legend-item');
-  assert.equal(await legendItems.count(), 4);
-  const legendTexts = await legendItems.allInnerTexts();
-  assert.match(legendTexts[0], /Hilton Hotels & Resorts/);
-  assert.match(legendTexts[0], /(^|\D)3(\D|$)/);
-  assert.match(legendTexts[1], /Conrad Hotels & Resorts/);
-  assert.match(legendTexts[1], /(^|\D)2(\D|$)/);
-  assert.match(legendTexts[2], /DoubleTree by Hilton/);
-  assert.match(legendTexts[2], /(^|\D)1(\D|$)/);
-  assert.match(legendTexts[3], /未标注品牌/);
-  assert.match(legendTexts[3], /(^|\D)1(\D|$)/);
+  // 展开亚洲 → 中国,准备勾选
+  const asia = page.locator('#geo-tree .continent-group', { hasText: '亚洲' });
+  await asia.locator('> summary').click();
+  const china = asia.locator('.country-group', { hasText: '中国' });
+  await china.locator('> summary').click();
+  assert.equal(await china.locator('.hotel-item').count(), 3);
 
-  // 初始全部品牌可见
-  for (const item of await legendItems.all()) {
-    assert.equal(await item.getAttribute('aria-pressed'), 'true');
-  }
-
-  // 隐藏 Hilton:纽约/悉尼仍独立,上海簇只剩 Conrad 两家 → 簇计数 3 → 2(重算)
-  const hiltonItem = page.locator('#legend .legend-item', { hasText: 'Hilton Hotels & Resorts' });
-  await hiltonItem.click();
-  await page.waitForFunction(() => document.querySelectorAll('.hotel-marker').length === 2);
-  await page.waitForFunction(
-    () => document.querySelectorAll('.marker-cluster').length === 1
-      && document.querySelector('.marker-cluster').textContent.trim() === '2',
-  );
-  assert.equal(await hiltonItem.getAttribute('aria-pressed'), 'false');
-
-  // 再隐藏 Conrad:上海簇整体消失,地图只剩柏林一家
-  const conradItem = page.locator('#legend .legend-item', { hasText: 'Conrad Hotels & Resorts' });
-  await conradItem.click();
-  await page.waitForFunction(
-    () => document.querySelectorAll('.marker-cluster').length === 0
-      && document.querySelectorAll('.hotel-marker').length === 2,
-  );
-
-  // 重新显示 Conrad:簇按当前可见品牌重建(计数 2)
-  await conradItem.click();
-  await page.waitForFunction(
-    () => document.querySelectorAll('.marker-cluster').length === 1
-      && document.querySelector('.marker-cluster').textContent.trim() === '2',
-  );
-
-  // 重新显示 Hilton:簇计数回到 3
-  await hiltonItem.click();
-  await page.waitForFunction(
-    () => document.querySelectorAll('.marker-cluster').length === 1
-      && document.querySelector('.marker-cluster').textContent.trim() === '3',
-  );
-  assert.equal(await hiltonItem.getAttribute('aria-pressed'), 'true');
-
-  // 隐藏/显示无品牌酒店(灰点):悉尼独立 marker 随之消失/重现
-  const unknownItem = page.locator('#legend .legend-item', { hasText: '未标注品牌' });
-  await unknownItem.click();
-  await page.waitForFunction(() => document.querySelectorAll('.hotel-marker').length === 2);
-  await unknownItem.click();
+  // 取消勾选中国:上海 marker(含簇)从地图消失,酒店行隐藏;
+  // 国家节点常驻(计数不变、仍展开),可随时勾回
+  await china.locator('.geo-toggle').first().click();
   await page.waitForFunction(() => document.querySelectorAll('.hotel-marker').length === 3);
+  await page.waitForFunction(() => document.querySelectorAll('.marker-cluster').length === 0);
+  assert.match(await china.locator('> summary').innerText(), /3 家/);
+  assert.equal(await china.locator('.hotel-item').count(), 0);
+  assert.equal(await china.getAttribute('class'), 'country-group geo-off');
+  assert.equal(await china.locator('> summary .geo-toggle').first().isChecked(), false);
 
-  // 隐藏品牌后点击其侧边栏酒店:自动恢复该品牌显示并打开 popup(不飞向不可见 marker)
+  // 勾回中国:marker 与酒店行恢复
+  await china.locator('> summary .geo-toggle').first().click();
+  await page.waitForFunction(() => document.querySelectorAll('.marker-cluster').length === 1);
+  assert.equal(await china.locator('.hotel-item').count(), 3);
+
+  // 与品牌图例 AND 叠加:隐藏 Conrad 后,中国的计数 3 → 1(剩 Hilton 一家),节点保留
+  const conradItem = page.locator('#legend .legend-item', { hasText: 'Conrad Hotels & Resorts' });
   await conradItem.click();
   await page.waitForFunction(
     () => document.querySelectorAll('.marker-cluster').length === 0
       && document.querySelectorAll('.hotel-marker').length === 4,
   );
-  const conradGroup = page.locator('#brand-groups details', { hasText: 'Conrad Hotels & Resorts' });
-  await conradGroup.locator('summary').click();
-  await page.locator('#brand-groups button', { hasText: 'Hotel A Shanghai' }).click();
-  await page.waitForFunction(() => document.querySelector('.leaflet-popup-content')?.textContent.includes('Hotel A Shanghai'));
+  assert.equal(await asia.count(), 1);
+  assert.match(await china.locator('> summary').innerText(), /1 家/);
+  assert.equal(await china.locator('.hotel-item').count(), 1);
+
+  // 再隐藏 Hilton:中国计数归 0(纽约酒店同属 Hilton 也被藏),国家节点连同亚洲整级隐藏
+  const hiltonItem = page.locator('#legend .legend-item', { hasText: 'Hilton Hotels & Resorts' });
+  await hiltonItem.click();
+  await page.waitForFunction(() => document.querySelectorAll('.hotel-marker').length === 2);
+  assert.equal(await asia.count(), 0);
+  // 只剩大洋洲(无品牌悉尼)与欧洲(柏林)两洲有可见酒店
+  assert.equal(await page.locator('#geo-tree .continent-group').count(), 2);
+
+  // 被隐藏品牌的酒店行不再出现在树里(点击恢复品牌的旧路径不复存在)
+  assert.equal(await page.locator('#geo-tree .hotel-item', { hasText: 'Hotel A Shanghai' }).count(), 0);
+
+  // 隐藏品牌不改变图例自身计数(图例计数保持全量)
+  assert.match(await conradItem.innerText(), /(^|\D)2(\D|$)/);
+
+  // 重新显示 Conrad 与 Hilton:亚洲/中国按品牌重建
+  await conradItem.click();
+  await hiltonItem.click();
   await page.waitForFunction(
     () => document.querySelectorAll('.marker-cluster').length === 1
       && document.querySelector('.marker-cluster').textContent.trim() === '3',
   );
-  assert.equal(await conradItem.getAttribute('aria-pressed'), 'true');
+  assert.equal(await page.locator('#geo-tree .continent-group', { hasText: '亚洲' }).count(), 1);
 
-  // 配色贯穿 marker/图例/侧边栏:同一品牌三处颜色一致
+  // 取消勾选两个国家 → 地图只剩纽约/悉尼;重置一键勾回(图例筛选不受影响)
+  const europe = page.locator('#geo-tree .continent-group', { hasText: '欧洲' });
+  await europe.locator('> summary').click();
+  const germany = europe.locator('.country-group', { hasText: '德国' });
+  await germany.locator('.geo-toggle').first().click();
+  await china.locator('> summary .geo-toggle').first().click();
+  await page.waitForFunction(() => document.querySelectorAll('.hotel-marker').length === 2);
+  await page.locator('#geo-reset').click();
+  await page.waitForFunction(
+    () => document.querySelectorAll('.marker-cluster').length === 1
+      && document.querySelectorAll('.hotel-marker').length === 3,
+  );
+  assert.equal(await page.locator('#geo-tree .hotel-item').count(), 7); // 全部酒店行,含禁用的无坐标酒店
+  assert.equal(await germany.locator('> summary .geo-toggle').first().isChecked(), true);
+
+  // 大洲复选框 = 其下全部国家:取消勾选亚洲即上海整体消失,勾回恢复
+  await asia.locator('> summary .geo-toggle').first().click();
+  await page.waitForFunction(() => document.querySelectorAll('.hotel-marker').length === 3);
+  await asia.locator('> summary .geo-toggle').first().click();
+  await page.waitForFunction(
+    () => document.querySelectorAll('.marker-cluster').length === 1
+      && document.querySelector('.marker-cluster').textContent.trim() === '3',
+  );
+
+  // 配色贯穿 marker/图例/popup:同一品牌三处颜色一致
   const legendColor = await hiltonItem.locator('.chip').evaluate((el) => getComputedStyle(el).backgroundColor);
-  const hiltonGroup = page.locator('#brand-groups details', { hasText: 'Hilton Hotels & Resorts' });
-  const sidebarColor = await hiltonGroup.locator('summary .chip').evaluate((el) => getComputedStyle(el).backgroundColor);
-  assert.equal(legendColor, sidebarColor);
-  await hiltonGroup.locator('summary').click();
-  await page.locator('#brand-groups button', { hasText: 'Hotel D New York' }).click();
+  const northAmerica = page.locator('#geo-tree .continent-group', { hasText: '北美洲' });
+  await northAmerica.locator('> summary').click();
+  await northAmerica.locator('.country-group', { hasText: '美国' }).locator('> summary').click();
+  await northAmerica.locator('.hotel-item', { hasText: 'Hotel D New York' }).click();
   await page.waitForFunction(() => document.querySelector('.leaflet-popup-content')?.textContent.includes('Hotel D New York'));
   const markerColor = await page.locator('.hotel-marker span').first().evaluate((el) => getComputedStyle(el).backgroundColor);
+  const popupChipColor = await page.locator('.leaflet-popup-content .chip').first().evaluate((el) => getComputedStyle(el).backgroundColor);
   assert.equal(legendColor, markerColor);
+  assert.equal(legendColor, popupChipColor);
 
   // 测试全程不碰网络:所有请求都被本地应答
   assert.deepEqual(externalRequests, []);

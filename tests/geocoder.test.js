@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
-import { createJsonLdGeocoder, createNominatimGeocoder, withFallback } from '../src/geocoders.mjs';
+import { createJsonLdGeocoder, createNominatimGeocoder, createNominatimReverseCountryGeocoder, withFallback } from '../src/geocoders.mjs';
 
 const withGeo = readFileSync(new URL('./fixtures/hotel-detail-jsonld.html', import.meta.url), 'utf8');
 const noGeo = readFileSync(new URL('./fixtures/hotel-detail-no-geo.html', import.meta.url), 'utf8');
@@ -222,4 +222,58 @@ test('回落组合:首选失败时采用回落结果,来源跟随实际提供者
   const geocode = withFallback(primary, fallback);
   assert.deepEqual(await geocode({ code: 'cuncici' }), { lat: 1, lng: 2, source: 'nominatim' });
   assert.deepEqual(calls, ['primary:cuncici', 'fallback:cuncici']);
+});
+
+test('Nominatim reverse:按坐标查国家代码,小写结果归一为大写', async () => {
+  const calls = [];
+  const jsonFetch = async (url) => {
+    calls.push(url);
+    return { ok: true, status: 200, json: async () => ({ address: { country_code: 'ae', country: 'United Arab Emirates' } }) };
+  };
+
+  const resolveCountry = createNominatimReverseCountryGeocoder({ fetchImpl: jsonFetch, delayMs: 0 });
+  const result = await resolveCountry({ code: 'auhetci', name: 'Conrad Abu Dhabi Etihad Towers', lat: 24.4583909, lng: 54.322254 });
+
+  assert.equal(result, 'AE');
+  assert.match(calls[0], /nominatim\.openstreetmap\.org\/reverse\?format=jsonv2&zoom=10&addressdetails=1&lat=24\.4583909&lon=54\.322254/);
+});
+
+test('Nominatim reverse:HTTP 错误、请求异常、响应缺地址都显式返回 null', async () => {
+  const jsonFetch = async (url) => {
+    if (url.includes('lat=1')) return { ok: false, status: 429, json: async () => ({}) };
+    if (url.includes('lat=2')) return { ok: true, status: 200, json: async () => ({ error: 'Unable to geocode' }) };
+    throw new Error('network down');
+  };
+  const resolveCountry = createNominatimReverseCountryGeocoder({ fetchImpl: jsonFetch, delayMs: 0, logger: { warn() {} } });
+
+  assert.equal(await resolveCountry({ code: 'aaaaaaa', name: 'Throttled', lat: 1, lng: 2 }), null);
+  assert.equal(await resolveCountry({ code: 'bbbbbbb', name: 'Ocean', lat: 2, lng: 3 }), null);
+  assert.equal(await resolveCountry({ code: 'ccccccc', name: 'Offline', lat: 3, lng: 4 }), null);
+});
+
+test('Nominatim reverse:无坐标的酒店直接返回 null,不发请求', async () => {
+  const calls = [];
+  const jsonFetch = async (url) => {
+    calls.push(url);
+    return { ok: true, status: 200, json: async () => ({ address: { country_code: 'us' } }) };
+  };
+  const resolveCountry = createNominatimReverseCountryGeocoder({ fetchImpl: jsonFetch, delayMs: 0 });
+
+  assert.equal(await resolveCountry({ code: 'nocoord', name: 'No Coords', lat: null, lng: null }), null);
+  assert.deepEqual(calls, []);
+});
+
+test('Nominatim reverse:连续调用时礼貌限速', async () => {
+  const calls = [];
+  const jsonFetch = async (url) => {
+    calls.push({ url, at: Date.now() });
+    return { ok: true, status: 200, json: async () => ({ address: { country_code: 'us' } }) };
+  };
+  const resolveCountry = createNominatimReverseCountryGeocoder({ fetchImpl: jsonFetch, delayMs: 25 });
+
+  await resolveCountry({ code: 'aaaaaaa', name: 'A', lat: 1, lng: 2 });
+  await resolveCountry({ code: 'bbbbbbb', name: 'B', lat: 3, lng: 4 });
+
+  assert.equal(calls.length, 2);
+  assert.ok(calls[1].at - calls[0].at >= 15, `间隔 ${calls[1].at - calls[0].at}ms 应 >= 15ms`);
 });

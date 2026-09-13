@@ -154,6 +154,31 @@ export function createNominatimGeocoder({ fetchImpl = fetch, delayMs = DEFAULT_D
   };
 }
 
+// Nominatim reverse 逆地理编码:按酒店坐标取所在国家的 ISO 3166-1 代码
+// (见 CONTEXT.md 的 Country 词条:国家按坐标所在的地理位置判定)。
+// zoom 收窄到城市级以减小响应;失败(网络/HTTP/响应缺地址)显式返回 null,不抛错。
+export function createNominatimReverseCountryGeocoder({ fetchImpl = fetch, delayMs = DEFAULT_DELAY_MS, logger = console } = {}) {
+  const beforeRequest = createLimiter(delayMs);
+  return async function resolveCountry(hotel) {
+    if (hotel.lat == null || hotel.lng == null) return null;
+    const url = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&zoom=10&addressdetails=1&lat=${hotel.lat}&lon=${hotel.lng}`;
+    await beforeRequest();
+
+    try {
+      const response = await fetchImpl(url, { headers: { 'user-agent': PIPELINE_UA } });
+      if (!response.ok) {
+        logger.warn?.(`[geocode] Nominatim reverse HTTP ${response.status} ${hotel.name}`);
+        return null;
+      }
+      const result = await response.json();
+      return result?.address?.country_code?.toUpperCase() ?? null;
+    } catch (error) {
+      logger.warn?.(`[geocode] Nominatim reverse 请求失败 ${hotel.name}: ${error.message}`);
+      return null;
+    }
+  };
+}
+
 // 组合回落链:首选服务返回 null 时依次尝试后续服务
 export function withFallback(...geocoders) {
   return async function geocode(hotel) {
