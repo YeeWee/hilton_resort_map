@@ -8,6 +8,14 @@
   <link rel="stylesheet" href="vendor/leaflet.markercluster/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="vendor/leaflet.markercluster/dist/MarkerCluster.Default.css" />
   <link rel="stylesheet" href="assets/style.css" />
+  <!-- @vercel/analytics 的浏览器入口映射到本地自托管副本(vendor/),免打包即可 ESM 导入 -->
+  <script type="importmap">
+    { "imports": { "@vercel/analytics": "./vendor/@vercel/analytics/dist/index.mjs" } }
+  </script>
+  <script type="module">
+    import { inject } from "@vercel/analytics";
+    inject();
+  </script>
 </head>
 <body>
   <header id="topbar">

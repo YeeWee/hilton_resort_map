@@ -19,9 +19,11 @@ const FILES = [
   'leaflet.markercluster/dist/MarkerCluster.css',
   'leaflet.markercluster/dist/MarkerCluster.Default.css',
   'leaflet.markercluster/dist/leaflet.markercluster.js',
+  '@vercel/analytics/dist/index.mjs',
 ];
-// 包名即产物路径的首段,版本从各包的 package.json 读取
-const PACKAGES = [...new Set(FILES.map((rel) => rel.split('/')[0]))];
+// 包名即产物路径的首段;scoped 包(@scope/pkg)取前两段,版本从各包的 package.json 读取
+const pkgNameOf = (rel) => (rel.startsWith('@') ? rel.split('/').slice(0, 2).join('/') : rel.split('/')[0]);
+const PACKAGES = [...new Set(FILES.map(pkgNameOf))];
 
 async function readFileMap(baseDir) {
   const files = new Map();
