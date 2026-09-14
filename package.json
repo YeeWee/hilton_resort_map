@@ -4,6 +4,7 @@
   "description": "把 Hilton 官方 Resort Credit Eligible Hotels 页面列出的酒店,按品牌呈现在一张 Leaflet 地图上",
   "type": "module",
   "private": true,
+  "packageManager": "pnpm@12.3.4",
   "scripts": {
     "build:data": "node scripts/build-data.mjs",
     "vendor": "node scripts/vendor.mjs",
