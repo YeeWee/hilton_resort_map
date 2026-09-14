@@ -6,7 +6,7 @@
 
 ```
 index.html + assets/     纯静态页面(底图 CARTO Voyager),零构建,JS/CSS 零外链
-vendor/                  第三方库 dist 产物(leaflet / leaflet.markercluster),由 npm run vendor 同步入库
+vendor/                  第三方库 dist 产物(leaflet / leaflet.markercluster / @vercel/analytics),由 pnpm run vendor 同步入库
 scripts/build-data.mjs   数据管线 CLI
 scripts/serve.mjs        零依赖静态服务器(本地预览与页面测试共用)
 scripts/vendor.mjs       零依赖 vendor 同步脚本(node_modules → vendor/,--check 只校验)
@@ -18,14 +18,14 @@ tests/                   测试接缝(test seam),全程不碰网络
 
 ## 前置要求
 
-- Node ≥ 20、npm(开发验证环境为 Node 24)。
-- `npm test` 的页面测试用本机系统 Chrome(headless),需装有 Google Chrome;无需 `npx playwright install`。
+- Node ≥ 20、pnpm(开发验证环境为 Node 24、pnpm 12.3.4)。版本由 `package.json` 的 `packageManager` 字段固定,换机克隆后 `corepack enable` 即可对齐同一 pnpm 版本。
+- `pnpm test` 的页面测试用本机系统 Chrome(headless),需装有 Google Chrome;无需 `npx playwright install`。
 
 ## 快速开始
 
 ```bash
-npm install        # 安装依赖(cheerio;devDependencies 里有 playwright 供测试用)
-npm start          # 启动本地预览,默认 http://localhost:8000/
+pnpm install       # 安装依赖(cheerio;devDependencies 里有 playwright 供测试用)
+pnpm start         # 启动本地预览,默认 http://localhost:8000/
 ```
 
 浏览器打开 <http://localhost:8000/>,即可看到地图。核对总数:页面顶栏显示"共 N 家 / M 个品牌",与管线输出、Hilton 官方页面三方一致即数据完整。
@@ -33,7 +33,7 @@ npm start          # 启动本地预览,默认 http://localhost:8000/
 ## 测试
 
 ```bash
-npm test
+pnpm test
 ```
 
 两条页面接缝 + vendor 脚本接缝,全程不碰网络:
@@ -42,16 +42,35 @@ npm test
 2. **页面整体**:headless Chrome 加载页面 + fixture 版 hotels.json → 断言用户可见的 DOM 行为(marker 总数、图例筛选、大洲/国家勾选与 AND 叠加、树计数联动、重置、聚合展开、popup 字段、侧边栏定位、统计行)。底图瓦片在路由层由本地副本应答;第三方库与页面同源加载,任何回潮的外链资源都会让"全程不碰网络"断言变红(另有静态断言禁止 index.html 引用外链 `<link>` / `<script>`)。
 3. **vendor 同步**:`node scripts/vendor.mjs --check` 校验 vendor/ 产物与 node_modules 逐字节一致、版本记录一致(见下节)。
 
+> @vercel/analytics 为 scoped 包(`@scope/pkg`),`scripts/vendor.mjs` 已按前两段解析包名并把它的浏览器入口同步进 `vendor/@vercel/analytics/dist/`。
+
 ## 第三方库升级动线
 
-Leaflet 与 leaflet.markercluster 的 dist 产物自托管在顶层 `vendor/`(决策见 [ADR-0001](docs/adr/0001-self-host-leaflet-and-markercluster.md)):index.html 引用同源相对路径、不带版本号,升级库时页面零改动;版本的唯一事实来源是 `package.json` 与 lockfile,`vendor/VERSIONS.json` 只供 git diff 阅读。
+Leaflet、leaflet.markercluster 与 @vercel/analytics 的 dist 产物自托管在顶层 `vendor/`(Leaflet 决策见 [ADR-0001](docs/adr/0001-self-host-leaflet-and-markercluster.md)):index.html 引用同源相对路径、不带版本号,升级库时页面零改动;版本的唯一事实来源是 `package.json` 与 lockfile,`vendor/VERSIONS.json` 只供 git diff 阅读。
 
 ```bash
-npm update leaflet leaflet.markercluster   # 1. 升级 npm 包
-npm run vendor                             # 2. 同步 dist 产物与 VERSIONS.json 入 vendor/
-npm test                                   # 3. 全量测试(--check 校验一致性)
-git add vendor/ package-lock.json          # 4. 提交 vendor/ 与 lockfile
+pnpm update leaflet leaflet.markercluster            # 1. 升级依赖包
+pnpm run vendor                                      # 2. 同步 dist 产物与 VERSIONS.json 入 vendor/
+pnpm test                                            # 3. 全量测试(--check 校验一致性)
+git add vendor/ pnpm-lock.yaml                       # 4. 提交 vendor/ 与 lockfile
 ```
+
+## Vercel Web Analytics
+
+页面经由 Vercel Web Analytics 上报访问数(见 [ADR-0002](docs/adr/0002-vercel-web-analytics.md))。站是纯静态、无打包器,所以用 **Import Map** 把包名 `@vercel/analytics` 映射到自托管的浏览器入口,再在 `index.html` 里调用 `inject()`:
+
+```html
+<script type="importmap">
+  { "imports": { "@vercel/analytics": "./vendor/@vercel/analytics/dist/index.mjs" } }
+</script>
+<script type="module">
+  import { inject } from "@vercel/analytics";
+  inject();
+</script>
+```
+
+- `inject()` 在生产模式插入 `<script defer src="/_vercel/insights/script.js">`,该端点由 Vercel 平台在**开启了 Web Analytics 的部署**上自动提供;未部署到 Vercel(如本地 `pnpm start`)时该脚本 404 静默失败,属正常预期。
+- 升级 @vercel/analytics 走同一套 vendor 动线:`pnpm update @vercel/analytics` → `pnpm run vendor` → `pnpm test`。
 
 ## 重跑管线(名单更新后)
 
@@ -63,10 +82,10 @@ curl --create-dirs -A "Mozilla/5.0" -o data/raw/resort-credit-eligible-hotels.ht
   https://www.hilton.com/en/p/hilton-honors/resort-credit-eligible-hotels/
 
 # 2. 重跑管线(建议始终带 --cache,详见下文)
-npm run build:data -- --cache data/raw/geocode-cache.json
+pnpm run build:data -- --cache data/raw/geocode-cache.json
 
 # 3. 核对总数:结束时会打印"共 N 家 / M 个品牌"与坐标来源分布;再 git add 提交产物
-npm start   # 打开页面,确认顶栏数字与之一致
+pnpm start  # 打开页面,确认顶栏数字与之一致
 git add data/hotels.json data/overrides.json   # overrides 有变更才需要加第二个
 git commit -m "刷新名单"
 ```
@@ -98,7 +117,7 @@ git commit -m "刷新名单"
    }
    ```
    `name` / `note` 仅便于人工核对,管线只读 `lat` / `lng`(必须为数字,否则管线报错拒绝启动)。
-4. **重跑管线** `npm run build:data -- --cache data/raw/geocode-cache.json`(已成功的酒店走缓存,不再请求外部服务)。
+4. **重跑管线** `pnpm run build:data -- --cache data/raw/geocode-cache.json`(已成功的酒店走缓存,不再请求外部服务)。
 5. 核对 stderr 不再有失败清单、坐标来源分布里 `override` 数量与文件一致,提交 `data/hotels.json` 与 `data/overrides.json`。
 
 > 名单变动后,已下架酒店的 overrides 条目会收到"不在页面名单中"的警告,可留存或清理,不影响运行。
