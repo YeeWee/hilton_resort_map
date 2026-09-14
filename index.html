@@ -24,7 +24,9 @@
         <span class="drawer-title">筛选酒店</span>
         <button id="drawer-close" type="button" aria-label="关闭筛选抽屉">✕</button>
       </div>
-      <details id="brand-strip" class="brand-filter" open>
+      <!-- 移动端(抽屉内)品牌筛选默认收起,点击 <summary> 后才展开品牌图例项;
+           桌面端 #brand-strip 由 CSS display:none 隐藏,品牌筛选走浮动 #legend。 -->
+      <details id="brand-strip" class="brand-filter">
         <summary>
           <span class="brand-strip-label">品牌筛选</span>
         </summary>

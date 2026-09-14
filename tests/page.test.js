@@ -13,6 +13,15 @@ import { createStaticServer } from '../scripts/serve.mjs';
 
 const repoRoot = fileURLToPath(new URL('..', import.meta.url));
 
+// 等待抽屉内品牌筛选条(<details id="brand-strip">)展开到图例项几何可见。<details>
+// 展开是浏览器原生行为,用逐项 boundingRect 探测,避免依赖 Playwright 可见性启发式。
+async function waitBrandItemsVisible(page) {
+  await page.waitForFunction(() =>
+    [...document.querySelectorAll('#brand-items .legend-item')]
+      .every((el) => { const r = el.getBoundingClientRect(); return r.width > 0 && r.height > 0; }),
+  );
+}
+
 const TILE_PNG =
   'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
 
@@ -251,8 +260,24 @@ test('页面整体(移动视口 390×844):抽屉式边栏默认收起、汉堡�
   const sideOpen = await page.locator('#sidebar').boundingBox();
   assert.ok(sideOpen.x >= 0, `抽屉应滑入视野、左缘>=0:left=${sideOpen.x}`);
   assert.ok(sideOpen.width <= 360); // min(88vw,360px) → 88vw=343 < 360
-  assert.equal(await page.locator('#brand-items .legend-item').count(), 4); // fixture 3 品牌 + 未标注品牌
+
+  // 抽屉内品牌筛选条默认收起:无 open 属性。<details> 折叠仅隐藏 #brand-items 的
+  // 图例项——渲染逻辑不变(图例项仍在 DOM),不删除、不改 aria-pressed。
+  assert.equal(await page.locator('#brand-strip').getAttribute('open'), null, '品牌筛选条应默认收起(不含 open 属性)');
+  assert.equal(await page.locator('#brand-items .legend-item').count(), 4, '图例项仍在 DOM(fixture 3 品牌 + 未标注品牌)');
+  assert.equal(await page.locator('#brand-items .legend-item').first().isVisible(), false, '默认收起的品牌图例项不可见');
   assert.equal(await page.locator('#geo-tree').count(), 1);
+
+  // 点击"品牌筛选"标题 → <details> 展开,品牌图例项全部可见;再次点击可收回。
+  await page.locator('#brand-strip > summary').click();
+  assert.equal(await page.locator('#brand-strip').getAttribute('open'), '', '点击摘要后品牌筛选条展开');
+  await waitBrandItemsVisible(page);
+  assert.equal(await page.locator('#brand-items .legend-item').filter({ visible: true }).count(), 4);
+  await page.locator('#brand-strip > summary').click();
+  assert.equal(await page.locator('#brand-strip').getAttribute('open'), null, '再次点击摘要后品牌筛选条收回');
+  await page.locator('#brand-strip > summary').click();
+  await waitBrandItemsVisible(page);
+
   const mapOpen = await page.locator('#map').boundingBox();
   assert.equal(Math.round(mapOpen.width), 390); // 抽屉开合不改变地图尺寸
 
