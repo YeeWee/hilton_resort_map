@@ -16,7 +16,7 @@ const repoRoot = fileURLToPath(new URL('..', import.meta.url));
 const TILE_PNG =
   'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==';
 
-async function openPage(t) {
+async function openPage(t, { viewport } = {}) {
   const fixtureJson = await readFile(new URL('./fixtures/hotels.fixture.json', import.meta.url), 'utf8');
   const server = createStaticServer(repoRoot);
   const baseUrl = await new Promise((resolve) => server.listen(0, '127.0.0.1', () => resolve(`http://127.0.0.1:${server.address().port}`)));
@@ -25,7 +25,7 @@ async function openPage(t) {
   const browser = await chromium.launch({ channel: 'chrome', headless: true });
   t.after(() => browser.close());
 
-  const context = await browser.newContext();
+  const context = await browser.newContext(viewport ? { viewport } : {});
   t.after(() => context.close());
 
   const externalRequests = [];
@@ -227,6 +227,107 @@ test('页面整体:国家勾选与品牌图例 AND 叠加,树计数联动,重置
 
   // 测试全程不碰网络:同源请求之外的一切(包括回潮的 unpkg 外链)都被记录且为空
   assert.deepEqual(externalRequests, []);
+});
+
+test('页面整体(移动视口 390×844):抽屉式边栏默认收起、汉堡开合、筛选联动、遮罩关闭', async (t) => {
+  const { page, externalRequests } = await openPage(t, { viewport: { width: 390, height: 844 } });
+
+  await page.waitForSelector('#stats:has-text("共 7 家 / 3 个品牌 / 4 个国家")');
+  await page.waitForFunction(() => document.querySelectorAll('.hotel-marker').length === 3);
+
+  // 首屏默认收起:抽屉离屏不可见,地图占满视口宽,按钮语义=收起态(aria-expanded 应为 false)
+  assert.equal(await page.locator('#sidebar').evaluate((el) => el.classList.contains('drawer-open')), false);
+  const sideClosed = await page.locator('#sidebar').boundingBox();
+  assert.ok(sideClosed !== null && sideClosed.x < 0, `抽屉应默认离屏:left=${sideClosed?.x}`);
+  const mapClosed = await page.locator('#map').boundingBox();
+  assert.equal(Math.round(mapClosed.width), 390); // 地图占满视口宽
+  assert.equal(await page.locator('#sidebar-toggle').getAttribute('aria-expanded'), 'false');
+
+  // 点顶栏汉堡 → 抽屉滑入视野,内含可折叠品牌筛选条 + 地理树;地图宽度不变(不触发 invalidateSize 路径)
+  await page.locator('#sidebar-toggle').click();
+  await page.waitForFunction(() => document.querySelector('#sidebar').classList.contains('drawer-open'));
+  // 等 0.25s 滑入过渡结束后再量几何
+  await page.waitForFunction(() => document.querySelector('#sidebar').getBoundingClientRect().left >= 0);
+  const sideOpen = await page.locator('#sidebar').boundingBox();
+  assert.ok(sideOpen.x >= 0, `抽屉应滑入视野、左缘>=0:left=${sideOpen.x}`);
+  assert.ok(sideOpen.width <= 360); // min(88vw,360px) → 88vw=343 < 360
+  assert.equal(await page.locator('#brand-items .legend-item').count(), 4); // fixture 3 品牌 + 未标注品牌
+  assert.equal(await page.locator('#geo-tree').count(), 1);
+  const mapOpen = await page.locator('#map').boundingBox();
+  assert.equal(Math.round(mapOpen.width), 390); // 抽屉开合不改变地图尺寸
+
+  // 抽屉内地理树联动:展开亚洲→中国,取消勾选中国则上海 cluster 消失
+  const asia = page.locator('#geo-tree .continent-group', { hasText: '亚洲' });
+  await asia.locator('> summary').click();
+  const china = asia.locator('.country-group', { hasText: '中国' });
+  await china.locator('> summary').click();
+  assert.equal(await china.locator('.hotel-item').count(), 3);
+  await china.locator('.geo-toggle').first().click();
+  await page.waitForFunction(() => document.querySelectorAll('.marker-cluster').length === 0);
+  assert.equal(await china.locator('.hotel-item').count(), 0);
+  await china.locator('> summary .geo-toggle').first().click();
+  await page.waitForFunction(() => document.querySelectorAll('.marker-cluster').length === 1);
+
+  // 抽屉内品牌筛选条联动:隐藏 Conrad → 上海簇拆散为 1 家 Hilton;桌面 #legend 副本 aria-pressed 同步
+  const conrad = page.locator('#brand-items .legend-item', { hasText: 'Conrad Hotels & Resorts' });
+  await conrad.click();
+  await page.waitForFunction(
+    () => document.querySelectorAll('.marker-cluster').length === 0
+      && document.querySelectorAll('.hotel-marker').length === 4,
+  );
+  assert.equal(await conrad.getAttribute('aria-pressed'), 'false');
+  assert.equal(
+    await page.locator('#legend .legend-item', { hasText: 'Conrad Hotels & Resorts' }).getAttribute('aria-pressed'),
+    'false',
+  );
+  await conrad.click();
+  await page.waitForFunction(() => document.querySelectorAll('.marker-cluster').length === 1);
+
+  // 三种关闭方式其一:点击半透明遮罩(抽屉右侧可见区域)→ 抽屉收起、地图回全屏
+  await page.locator('#drawer-backdrop').click({ position: { x: 370, y: 400 } });
+  await page.waitForFunction(() => !document.querySelector('#sidebar').classList.contains('drawer-open'));
+  // 等收起过渡结束:抽屉重新离屏
+  await page.waitForFunction(() => document.querySelector('#sidebar').getBoundingClientRect().left < -100);
+  assert.equal(await page.locator('#sidebar-toggle').getAttribute('aria-expanded'), 'false');
+  const sideClosedAgain = await page.locator('#sidebar').boundingBox();
+  assert.ok(sideClosedAgain.x < 0);
+
+  // 顶栏按钮再开,抽屉内 ✕ 再关(三种关闭路径覆全)
+  await page.locator('#sidebar-toggle').click();
+  await page.waitForFunction(() => document.querySelector('#sidebar').classList.contains('drawer-open'));
+  await page.locator('#drawer-close').click();
+  await page.waitForFunction(() => !document.querySelector('#sidebar').classList.contains('drawer-open'));
+
+  // 测试全程不碰网络
+  assert.deepEqual(externalRequests, []);
+});
+
+test('页面整体(最窄手机视口 320×568):抽屉收窄适配、三级树不横向溢出', async (t) => {
+  const { page } = await openPage(t, { viewport: { width: 320, height: 568 } });
+
+  await page.waitForSelector('#stats:has-text("共 7 家 / 3 个品牌 / 4 个国家")');
+  await page.waitForFunction(() => document.querySelectorAll('.hotel-marker').length === 3);
+
+  // 最窄手机:抽屉宽度跟随 88vw(320×0.88=281<360),收起时地图占满视口
+  assert.equal(Math.round((await page.locator('#map').boundingBox()).width), 320);
+  await page.locator('#sidebar-toggle').click();
+  await page.waitForFunction(() => document.querySelector('#sidebar').classList.contains('drawer-open'));
+  await page.waitForFunction(() => document.querySelector('#sidebar').getBoundingClientRect().left >= 0);
+  const side = await page.locator('#sidebar').boundingBox();
+  assert.equal(Math.round(side.width), 282); // 88vw → 281.6 向上取整为宽
+  assert.ok(side.width <= 320);
+
+  // 三级树在收窄抽屉内不横向溢出:整棵 geo-tree 与每洲 summary 都落在抽屉内
+  const overflow = await page.evaluate(() => {
+    const sidebar = document.querySelector('#sidebar').getBoundingClientRect();
+    const tree = document.querySelector('#geo-tree').getBoundingClientRect();
+    const summaries = [...document.querySelectorAll('#geo-tree summary')]
+      .map((el) => el.getBoundingClientRect());
+    const within = (r) => r.left >= sidebar.left - 1 && r.right <= sidebar.right + 1;
+    return { treeOk: within(tree), summariesOk: summaries.every(within) };
+  });
+  assert.ok(overflow.treeOk, 'geo-tree 不应横向溢出抽屉');
+  assert.ok(overflow.summariesOk, '三级树 summary 不应横向溢出抽屉');
 });
 
 test('页面整体:底图瓦片请求携带 CARTO api key', async (t) => {

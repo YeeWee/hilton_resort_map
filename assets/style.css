@@ -30,6 +30,9 @@ html, body {
   cursor: pointer;
 }
 
+/* 汉堡图标仅移动断点可见;桌面只显示文字(文字留作可访问名) */
+#sidebar-toggle .toggle-icon { display: none; }
+
 #layout {
   display: flex;
   height: calc(100% - 41px);
@@ -225,4 +228,91 @@ html, body {
   display: inline-block;
   margin-top: 4px;
   color: #104da6;
+}
+
+/* ---- 移动抽屉式边栏(仅 <768px,≥768 完全沿用桌面常驻布局) ---- */
+
+/* 桌面默认隐藏移动特有的抽屉部件(断点内才启用) */
+.drawer-head, #brand-strip, #drawer-backdrop { display: none; }
+
+@media (max-width: 767px) {
+  /* 顶栏开关退化为汉堡:只显 ☰,文字保留在可访问树里 */
+  #sidebar-toggle .toggle-icon { display: inline-block; font-size: 18px; line-height: 1; }
+  #sidebar-toggle .toggle-label {
+    position: absolute;
+    width: 1px; height: 1px; margin: -1px; padding: 0;
+    overflow: hidden; clip: rect(0 0 0 0); border: 0;
+  }
+
+  /* 抽屉头部 + 关闭按钮 */
+  .drawer-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border-bottom: 1px solid #e5e7eb;
+    background: #fff;
+  }
+  .drawer-title { font-size: 14px; font-weight: 600; color: #1f2937; }
+  #drawer-close {
+    padding: 2px 6px;
+    border: 0;
+    background: none;
+    font-size: 16px;
+    color: #6b7280;
+    cursor: pointer;
+  }
+
+  /* 抽屉内可折叠品牌筛选条(与地理树同滚动容器内并排可见) */
+  #brand-strip { display: block; background: #fff; }
+  #brand-strip summary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    list-style: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  #brand-strip summary::-webkit-details-marker { display: none; }
+  #brand-items { padding: 4px 0 6px; }
+
+  /* 覆盖桌面 .sidebar-collapsed 的 display:none:移动端抽屉走 transform 而非显隐 */
+  #layout.sidebar-collapsed #sidebar { display: flex; }
+
+  /* 抽屉覆盖式:fixed 从左侧滑入、覆盖在完整尺寸地图上方 */
+  #sidebar {
+    position: fixed;
+    top: 41px; /* 顶栏高,与 #layout 的 calc(100% - 41px) 一致 */
+    left: 0;
+    bottom: 0;
+    width: min(88vw, 360px);
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e5e7eb;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+    z-index: 1200;
+    box-shadow: none;
+  }
+  #sidebar.drawer-open {
+    transform: translateX(0);
+    box-shadow: 4px 0 16px rgba(0, 0, 0, 0.25);
+  }
+  /* 抽屉打开时 #map 尺寸不变 ⇒ 无需调用 map.invalidateSize()(见 spec) */
+
+  /* 桌面浮动图例隐藏;品牌筛选改由抽屉内 #brand-strip 承担 */
+  #legend { display: none; }
+
+  /* 半透明遮罩:覆盖抽屉之外的地图区域,点击关闭抽屉 */
+  #drawer-backdrop:not([hidden]) {
+    display: block;
+    position: fixed;
+    top: 41px; right: 0; bottom: 0; left: 0;
+    background: rgba(17, 24, 39, 0.45);
+    z-index: 1100;
+  }
 }

@@ -13,10 +13,23 @@
   <header id="topbar">
     <h1>Hilton Resort Credit 合格酒店地图</h1>
     <div id="stats">加载中…</div>
-    <button id="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="true">收起侧边栏</button>
+    <button id="sidebar-toggle" type="button" aria-controls="sidebar" aria-expanded="true">
+      <span class="toggle-icon" aria-hidden="true">☰</span>
+      <span class="toggle-label">收起侧边栏</span>
+    </button>
   </header>
   <div id="layout">
     <aside id="sidebar" aria-label="酒店列表">
+      <div class="drawer-head">
+        <span class="drawer-title">筛选酒店</span>
+        <button id="drawer-close" type="button" aria-label="关闭筛选抽屉">✕</button>
+      </div>
+      <details id="brand-strip" class="brand-filter" open>
+        <summary>
+          <span class="brand-strip-label">品牌筛选</span>
+        </summary>
+        <div id="brand-items"></div>
+      </details>
       <div id="geo-toolbar">
         <span id="geo-hint">大洲 / 国家(勾选筛选)</span>
         <button id="geo-reset" type="button">重置筛选</button>
@@ -25,6 +38,7 @@
     </aside>
     <div id="map" aria-label="地图"></div>
   </div>
+  <div id="drawer-backdrop" hidden aria-hidden="true"></div>
   <script src="vendor/leaflet/dist/leaflet.js"></script>
   <script src="vendor/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
   <script src="assets/main.js" defer></script>

@@ -60,15 +60,8 @@ function groupByBrandOrdered(hotels) {
   return [...byBrand.entries()].sort((a, b) => (a[0] === null) - (b[0] === null) || b[1].length - a[1].length);
 }
 
-function renderLegend(hotels) {
-  const legend = document.createElement('div');
-  legend.id = 'legend';
-
-  const title = document.createElement('div');
-  title.className = 'legend-title';
-  title.textContent = '品牌图例(点击筛选)';
-  legend.appendChild(title);
-
+function createLegendItems(hotels) {
+  const items = [];
   for (const [brand, groupHotels] of groupByBrandOrdered(hotels)) {
     const item = document.createElement('button');
     item.type = 'button';
@@ -81,15 +74,33 @@ function renderLegend(hotels) {
     item.addEventListener('click', () => {
       setBrandVisible(brand, item.getAttribute('aria-pressed') !== 'true');
     });
-    legendItemsByBrand.set(brand, item);
-    legend.appendChild(item);
+    legendCopiesByBrand.set(brand, [...(legendCopiesByBrand.get(brand) ?? []), item]);
+    items.push(item);
   }
+  return items;
+}
+
+function renderLegend(hotels) {
+  // 桌面:浮在地图右上角(维持现状 #legend + #map.appendChild + position:absolute)
+  const legend = document.createElement('div');
+  legend.id = 'legend';
+
+  const title = document.createElement('div');
+  title.className = 'legend-title';
+  title.textContent = '品牌图例(点击筛选)';
+  legend.appendChild(title);
+  for (const item of createLegendItems(hotels)) legend.appendChild(item);
 
   const mapContainer = document.getElementById('map');
   mapContainer.appendChild(legend);
   // 图例浮在地图上,按下/滚轮不应拖动或缩放底图
   L.DomEvent.disableClickPropagation(legend);
   L.DomEvent.disableScrollPropagation(legend);
+
+  // 移动:抽屉内另渲染一份副本(一个 DOM 节点不能有两个父容器,见 spec Q10),
+  // 品牌显隐走下述 setBrandVisible 对全部副本批量同步 aria-pressed
+  const brandItems = document.getElementById('brand-items');
+  for (const item of createLegendItems(hotels)) brandItems.appendChild(item);
 }
 
 // ---- 侧边栏:大洲 → 国家 → 酒店三级树(勾选筛选 + 导航定位) ----
@@ -280,13 +291,15 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
 const cluster = L.markerClusterGroup({ showCoverageOnHover: false });
 map.addLayer(cluster);
 
-const legendItemsByBrand = new Map();
+const legendCopiesByBrand = new Map(); // brand → 图例项副本数组(#legend + 抽屉 #brand-items 各一份)
 
-// 切换一个品牌的显隐并同步图例项;marker 与侧边栏酒店行都跟随 品牌 × 国家 筛选
+// 切换一个品牌的显隐并同步全部图例副本;marker 与侧边栏酒店行都跟随 品牌 × 国家 筛选
 function setBrandVisible(brand, visible) {
   if (visible) hiddenBrands.delete(brand);
   else hiddenBrands.add(brand);
-  legendItemsByBrand.get(brand)?.setAttribute('aria-pressed', String(visible));
+  for (const item of (legendCopiesByBrand.get(brand) ?? [])) {
+    item.setAttribute('aria-pressed', String(visible));
+  }
   refreshMarkers();
   renderTree();
 }
@@ -335,9 +348,49 @@ document.getElementById('geo-reset').addEventListener('click', () => {
   renderTree();
 });
 
-document.getElementById('sidebar-toggle').addEventListener('click', (event) => {
-  const collapsed = document.getElementById('layout').classList.toggle('sidebar-collapsed');
-  event.target.textContent = collapsed ? '展开侧边栏' : '收起侧边栏';
-  event.target.setAttribute('aria-expanded', String(!collapsed));
-  map.invalidateSize();
+// ---- 顶栏开关:桌面走 flex 收缩路径,移动走抽屉覆盖路径 ----
+// 依赖唯一断点匹配 max-width:767px;≥768 完全沿用桌面常驻布局
+const mobileQuery = window.matchMedia('(max-width: 767px)');
+const sidebarEl = document.getElementById('sidebar');
+const toggleBtn = document.getElementById('sidebar-toggle');
+const layoutEl = document.getElementById('layout');
+const backdropEl = document.getElementById('drawer-backdrop');
+
+// 按当前断点对齐按钮语义:桌面=sidebar-collapsed 反相,移动=首页抽屉开合
+function syncToggleLabel() {
+  const onMobile = mobileQuery.matches;
+  const drawerOpen = sidebarEl.classList.contains('drawer-open');
+  const collapsed = layoutEl.classList.contains('sidebar-collapsed');
+  toggleBtn.querySelector('.toggle-label').textContent =
+    (onMobile ? drawerOpen : !collapsed) ? '收起侧边栏' : '展开侧边栏';
+  toggleBtn.setAttribute('aria-expanded', String(onMobile ? drawerOpen : !collapsed));
+}
+
+// 移动抽屉开合:侧边栏 fixed 滑入/滑出覆盖层,叠加遮罩与 ✕。地图尺寸不变 ⇒ 无需 invalidateSize
+function setDrawerOpen(open) {
+  sidebarEl.classList.toggle('drawer-open', open);
+  backdropEl.hidden = !open;
+  syncToggleLabel();
+}
+
+// 跨断点:抽屉不跨屏保留,回到桌面即收束(桌面由 flex 收缩接管)
+mobileQuery.addEventListener('change', () => {
+  setDrawerOpen(false);
+  syncToggleLabel();
 });
+
+toggleBtn.addEventListener('click', () => {
+  if (mobileQuery.matches) {
+    setDrawerOpen(!sidebarEl.classList.contains('drawer-open'));
+  } else {
+    layoutEl.classList.toggle('sidebar-collapsed');
+    syncToggleLabel();
+    map.invalidateSize();
+  }
+});
+
+document.getElementById('drawer-close').addEventListener('click', () => setDrawerOpen(false));
+backdropEl.addEventListener('click', () => setDrawerOpen(false));
+
+// 首屏按当前断点对齐按钮语义:桌面=展开(收起侧边栏),移动=抽屉收起(展开侧边栏)
+syncToggleLabel();
